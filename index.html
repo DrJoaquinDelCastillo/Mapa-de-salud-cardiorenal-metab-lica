@@ -65,25 +65,27 @@
     .result{border:1px solid var(--line);border-radius:13px;padding:12px;background:linear-gradient(160deg,#fff,#f5f8f9);min-height:88px}.result .k{font-size:11px;color:var(--muted);font-weight:700}.result .v{font-size:23px;font-weight:800;margin-top:4px;letter-spacing:-.03em}.result .s{font-size:10px;color:var(--muted);margin-top:2px}
     .empty{padding:32px 18px;text-align:center;color:var(--muted);border:1px dashed #cbd6dd;border-radius:13px;background:#fafcfc}.empty strong{display:block;color:#3d4b58;margin-bottom:5px}
     .domain{margin-bottom:21px}.domain:last-child{margin-bottom:0}.domain-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}.domain-head h3{font-size:13px;margin:0}.domain-head span{font-size:10px;color:var(--muted)}
-    .flag-grid{display:flex;flex-wrap:wrap;gap:7px}.flag{border-radius:999px;padding:7px 10px;font-size:10px;font-weight:800;border:1px solid currentColor}.flag.danger{color:#b93232;background:#fdeaea}.flag.high{color:#a35417;background:#fff0e3}.flag.watch{color:#856700;background:#fff7d8}.flag.neutral{color:#586777;background:#eff3f5}
-    .metric{display:grid;grid-template-columns:165px 1fr 92px;gap:11px;align-items:center;padding:8px 0;border-bottom:1px solid #edf1f3}.metric:last-child{border-bottom:0}.metric-name{font-size:12px;font-weight:700}.metric-name small{display:block;color:var(--muted);font-size:10px;font-weight:400}.track{height:12px;border-radius:999px;background:linear-gradient(90deg,var(--good) 0 24%,#a8bf32 35%,var(--watch) 48%,var(--high) 70%,var(--danger) 100%);position:relative;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+    .flag-grid{display:flex;flex-wrap:wrap;gap:7px}.flag{border-radius:999px;padding:7px 10px;font-size:10px;font-weight:800;border:1px solid currentColor}.flag.exposure{color:#9b4d16;background:#fff1e7}.flag.condition{color:#075d54;background:#e3f4f0}.flag.history{color:#586777;background:#eff3f5}
+    .metric{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:7px 12px;align-items:end;padding:10px 0;border-bottom:1px solid #edf1f3}.metric:last-child{border-bottom:0}.metric-name{font-size:12px;font-weight:800;line-height:1.32}.metric-range{color:var(--muted);font-size:10px;font-weight:500}.metric-note{display:block;color:var(--muted);font-size:10px;font-weight:400;margin-top:2px}.track{grid-column:1/-1;height:12px;border-radius:999px;background:linear-gradient(90deg,var(--good) 0 24%,#a8bf32 35%,var(--watch) 48%,var(--high) 70%,var(--danger) 100%);position:relative;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
     .track.neutral-track{background:linear-gradient(90deg,#cbd4dc,#98a5b1,#cbd4dc)}
     .marker{position:absolute;z-index:4;top:50%;width:17px;height:17px;border-radius:50%;background:#17212b;border:3px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.35);transform:translate(-50%,-50%)}
-    .metric-value{text-align:right;font-size:12px;font-weight:800}.metric-value small{display:block;font-size:9px;font-weight:700}.status-good{color:var(--good)}.status-watch{color:#9c7500}.status-high{color:var(--high)}.status-danger{color:var(--danger)}.status-neutral{color:var(--neutral)}
-    .profile-compare{margin-bottom:15px;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:#f8fafb}.profile-compare-title{font-size:11px;font-weight:800;color:#425160;margin-bottom:8px}.compare-options{display:flex;gap:8px;flex-wrap:wrap}.compare-option{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:#4d5c69;border:1px solid var(--line);border-radius:999px;padding:6px 9px;background:#fff;cursor:pointer}.compare-option input{width:auto;margin:0}.compare-swatch{width:14px;height:3px;border-radius:2px;background:var(--series-color)}
+    .metric-value{text-align:right;font-size:12px;font-weight:800;white-space:nowrap}
     .profile-stage{position:relative}.profile-lines{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;overflow:visible}.profile-note{font-size:10px;color:var(--muted);margin:10px 0 0}
+    .map-card-actions{display:flex;gap:7px;align-items:center;flex:0 0 auto}
     .trend-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}.trend-controls label{margin:0}.trend-controls select{width:auto;min-width:190px}.trend-chart{min-height:220px}.trend-chart svg{display:block;width:100%;height:auto}.trend-frame{fill:#fbfcfd;stroke:var(--line)}.trend-grid{stroke:#e5ecef;stroke-width:1}.trend-line{fill:none;stroke:#17212b;stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}.trend-point{stroke:#fff;stroke-width:2}.trend-axis{fill:var(--muted);font-size:10px}.trend-value{fill:var(--ink);font-size:10px;font-weight:700}
     .timeline-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}.timeline{border-collapse:separate;border-spacing:0;width:100%;min-width:640px;font-size:11px}.timeline th,.timeline td{padding:8px 9px;border-right:1px solid #e7edef;border-bottom:1px solid #e7edef;text-align:center;white-space:nowrap}.timeline th{position:sticky;top:0;background:#eef3f5;z-index:1;color:#42515f}.timeline th:first-child,.timeline td:first-child{position:sticky;left:0;text-align:left;background:#fff;z-index:2;font-weight:700}.timeline th:first-child{background:#eef3f5;z-index:3}.timeline tr:last-child td{border-bottom:0}.timeline td:last-child,.timeline th:last-child{border-right:0}
     .cell-good{background:#e5f5e9!important;color:#226d32}.cell-watch{background:#fff4ca!important;color:#816400}.cell-high{background:#ffeadb!important;color:#a94c0e}.cell-danger{background:#fde1e1!important;color:#a72d2d}.cell-neutral{background:#f2f4f6!important;color:#6a7681}
     .history-list{display:grid;gap:8px;margin-top:12px}.visit{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:11px;padding:10px 11px}.visit b{font-size:12px}.visit small{display:block;color:var(--muted);font-size:10px;margin-top:2px}
     .note{font-size:11px;color:var(--muted);background:#f6f8f9;border-radius:10px;padding:10px 11px;margin-top:12px}
     .toast{position:fixed;right:20px;bottom:20px;z-index:50;max-width:360px;padding:12px 15px;background:#17212b;color:#fff;border-radius:12px;box-shadow:0 15px 35px rgba(0,0,0,.25);font-size:12px;opacity:0;transform:translateY(12px);pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:none}
-    .modal{position:fixed;inset:0;z-index:60;background:rgba(13,28,38,.58);display:none;place-items:center;padding:20px}.modal.open{display:grid}.modal-box{background:#fff;border-radius:18px;max-width:760px;width:100%;max-height:85vh;overflow:auto;box-shadow:0 25px 80px rgba(0,0,0,.3)}.modal-box header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);padding:16px 20px;display:flex;justify-content:space-between;align-items:center}.modal-box header h2{font-size:17px;margin:0}.modal-content{padding:20px;font-size:13px}.modal-content h3{font-size:14px;margin:20px 0 8px}.modal-content h3:first-child{margin-top:0}.modal-content ul{padding-left:20px}
+    .condition-entry{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}.condition-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.condition-tag{display:inline-flex;align-items:center;gap:7px;border:1px solid #72bfb1;border-radius:999px;padding:6px 9px;background:#e3f4f0;color:#075d54;font-size:11px;font-weight:800}.condition-tag button{border:0;background:transparent;color:#075d54;font-weight:900;padding:0;line-height:1}
+    .map-note{margin-top:14px;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:#f8fafb;font-size:10px;color:#4d5c69;white-space:pre-wrap}.map-note strong{display:block;color:var(--ink);margin-bottom:4px}
+    .modal{position:fixed;inset:0;z-index:60;background:rgba(13,28,38,.58);display:none;place-items:center;padding:20px}.modal.open{display:grid}.modal-box{background:#fff;border-radius:18px;max-width:760px;width:100%;max-height:85vh;overflow:auto;box-shadow:0 25px 80px rgba(0,0,0,.3)}.modal-box header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);padding:16px 20px;display:flex;justify-content:space-between;align-items:center}.modal-box header h2{font-size:17px;margin:0}.modal-content{padding:20px;font-size:13px}.modal-content h3{font-size:14px;margin:20px 0 8px}.modal-content h3:first-child{margin-top:0}.modal-content ul{padding-left:20px}.pdf-choice-list{display:grid;gap:8px;margin:14px 0}.pdf-choice{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:11px;padding:10px 12px;background:#fbfcfd;font-size:12px;font-weight:700}.pdf-choice input{width:auto;margin:0}.modal-actions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap;margin-top:16px}
     .print-only{display:none}
-    @media(max-width:1050px){.layout{grid-template-columns:1fr}.right{order:-1}.metric{grid-template-columns:150px 1fr 85px}.patient-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:700px){.app{padding:0 12px;margin-top:12px}.topbar-inner{padding:10px 12px}.brand p{display:none}.top-actions .btn span{display:none}.home-hero{align-items:flex-start;flex-direction:column;padding:18px}.home-hero h2{font-size:21px}.home-actions{width:100%}.home-actions .btn{flex:1 1 145px}.patient-grid{grid-template-columns:1fr}.workspace-nav{align-items:flex-start;flex-direction:column}.workspace-actions{width:100%}.workspace-actions .btn{flex:1}.card-body{padding:15px}.card-head{padding:15px}.field,.field.span-2,.field.span-3,.field.span-4{grid-column:span 6}.field.span-6,.field.span-8,.field.span-12{grid-column:span 12}.results{grid-template-columns:repeat(2,1fr)}.metric{grid-template-columns:1fr 80px}.metric .track{grid-column:1/-1;grid-row:2}.metric-value{grid-column:2;grid-row:1}.privacy{font-size:11px}.trend-controls{display:grid;grid-template-columns:1fr}.trend-controls select{width:100%}}
-    @media(max-width:430px){.field,.field.span-2,.field.span-3,.field.span-4,.field.span-6{grid-column:span 12}.results{grid-template-columns:1fr 1fr}.result .v{font-size:19px}.top-actions{gap:5px}.btn{padding:8px}.brand-mark{width:36px;height:36px}.patient-actions{grid-template-columns:1fr}}
-    @media print{body{background:#fff}.topbar,.privacy,.left,.top-actions,.form-actions,.history-actions,.btn,.note,.home-screen,.workspace-nav,.profile-compare,.trend-controls{display:none!important}.app{max-width:none;margin:0;padding:0}.layout{display:block}.card{box-shadow:none;border:0}.card-head{padding:8px 0}.card-body{padding:10px 0}.print-only{display:block}.metric{break-inside:avoid}.timeline-wrap{overflow:visible}.timeline{min-width:0}.timeline th:first-child,.timeline td:first-child{position:static}}
+    @media(max-width:1050px){.layout{grid-template-columns:1fr}.right{order:-1}.patient-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:700px){.app{padding:0 12px;margin-top:12px}.topbar-inner{padding:10px 12px}.brand p{display:none}.top-actions .btn span{display:none}.home-hero{align-items:flex-start;flex-direction:column;padding:18px}.home-hero h2{font-size:21px}.home-actions{width:100%}.home-actions .btn{flex:1 1 145px}.patient-grid{grid-template-columns:1fr}.workspace-nav{align-items:flex-start;flex-direction:column}.workspace-actions{width:100%}.workspace-actions .btn{flex:1}.card-body{padding:15px}.card-head{padding:15px}.field,.field.span-2,.field.span-3,.field.span-4{grid-column:span 6}.field.span-6,.field.span-8,.field.span-12{grid-column:span 12}.results{grid-template-columns:repeat(2,1fr)}.privacy{font-size:11px}.trend-controls{display:grid;grid-template-columns:1fr}.trend-controls select{width:100%}.condition-entry{grid-template-columns:1fr}.modal-actions .btn{flex:1}}
+    @media(max-width:430px){.field,.field.span-2,.field.span-3,.field.span-4,.field.span-6{grid-column:span 12}.results{grid-template-columns:1fr 1fr}.result .v{font-size:19px}.top-actions{gap:5px}.btn{padding:8px}.brand-mark{width:36px;height:36px}.patient-actions{grid-template-columns:1fr}.map-card-actions .btn span{display:none}}
+    @media print{body{background:#fff}.topbar,.privacy,.left,.top-actions,.form-actions,.history-actions,.btn,.note,.home-screen,.workspace-nav,.trend-controls{display:none!important}.app{max-width:none;margin:0;padding:0}.layout{display:block}.card{box-shadow:none;border:0}.card-head{padding:8px 0}.card-body{padding:10px 0}.print-only{display:block}.metric{break-inside:avoid}.timeline-wrap{overflow:visible}.timeline{min-width:0}.timeline th:first-child,.timeline td:first-child{position:static}}
   </style>
 </head>
 <body>
@@ -176,7 +178,8 @@
                 <div class="field span-3"><label>Frecuencia cardíaca en reposo</label><div class="unit-wrap"><input data-key="restingHR" type="number" min="30" max="180" step="1"><span class="unit">lpm</span></div></div>
                 <div class="field span-3"><label>Sueño habitual</label><div class="unit-wrap"><input data-key="sleepHours" type="number" min="0" max="14" step="0.25"><span class="unit">h</span></div></div>
                 <div class="field span-3"><label>Pasos diarios</label><input data-key="steps" type="number" min="0" max="60000" step="100"></div>
-                <div class="field span-3"><label>Actividad aeróbica</label><div class="unit-wrap"><input data-key="aerobicMinutes" type="number" min="0" max="1500" step="5"><span class="unit">min/sem</span></div></div>
+                <div class="field span-3"><label>Actividad aeróbica moderada</label><div class="unit-wrap"><input data-key="aerobicMinutes" type="number" min="0" max="1500" step="5"><span class="unit">min/sem</span></div></div>
+                <div class="field span-3"><label>Actividad aeróbica vigorosa</label><div class="unit-wrap"><input data-key="vigorousMinutes" type="number" min="0" max="1500" step="5"><span class="unit">min/sem</span></div></div>
                 <div class="field span-3"><label>Fuerza</label><div class="unit-wrap"><input data-key="strengthSessions" type="number" min="0" max="14" step="1"><span class="unit">ses/sem</span></div></div>
                 <div class="field span-3"><label>Tiempo sentado</label><div class="unit-wrap"><input data-key="sittingHours" type="number" min="0" max="20" step="0.5"><span class="unit">h/día</span></div></div>
               </div>
@@ -220,9 +223,9 @@
                   <div class="field span-3"><label>Meta no-HDL-C</label><div class="unit-wrap"><input data-key="nonHdlTarget" type="number" value="130" min="30" max="220"><span class="unit">mg/dL</span></div></div>
                   <div class="field span-3"><label>Meta ApoB</label><div class="unit-wrap"><input data-key="apobTarget" type="number" value="90" min="20" max="160"><span class="unit">mg/dL</span></div></div>
                   <div class="field span-3"><label>LSN AST</label><div class="unit-wrap"><input data-key="astUln" type="number" value="35" min="5" max="100"><span class="unit">U/L</span></div></div>
-                  <div class="field span-3"><label>LSN ALT</label><div class="unit-wrap"><input data-key="altUln" type="number" value="35" min="5" max="100"><span class="unit">U/L</span></div></div>
+                  <div class="field span-3"><label>LSN ALT<span class="hint">Opcional; vacío usa 25 mujer / 33 hombre</span></label><div class="unit-wrap"><input data-key="altUln" type="number" min="5" max="100"><span class="unit">U/L</span></div></div>
                   <div class="field span-3"><label>LSN GGT</label><div class="unit-wrap"><input data-key="ggtUln" type="number" value="55" min="5" max="200"><span class="unit">U/L</span></div></div>
-                  <div class="field span-6"><label>Contexto de metas</label><select data-key="targetContext" id="targetContext"><option value="custom">Conservar metas manuales</option><option value="standard">Prevención general · LDL 100 / no-HDL 130 / ApoB 90</option><option value="intensified">Meta intensificada · LDL 70 / no-HDL 100 / ApoB 65</option><option value="veryHigh">Riesgo muy alto · LDL 55 / no-HDL 85 / ApoB 55</option></select></div>
+                  <div class="field span-6"><label>Contexto de metas<span class="hint">La selección es clínica y manual; el sistema no asigna riesgo</span></label><select data-key="targetContext" id="targetContext"><option value="custom">Conservar metas manuales</option><option value="standard">Objetivo estándar · LDL &lt;100 / no-HDL &lt;130 / ApoB &lt;90</option><option value="intensified">Objetivo intensificado · LDL &lt;70 / no-HDL &lt;100 / ApoB &lt;70</option><option value="veryHigh">Objetivo muy alto riesgo · LDL &lt;55 / no-HDL &lt;85 / ApoB &lt;60</option></select></div>
                 </div>
               </details>
             </div>
@@ -249,6 +252,11 @@
                 <span class="chip"><input id="osa" data-key="osa" type="checkbox"><label for="osa">Apnea obstructiva del sueño</label></span>
                 <span class="chip"><input id="familyHistory" data-key="familyHistory" type="checkbox"><label for="familyHistory">Historia familiar de ASCVD prematura</label></span>
               </div>
+              <div class="section-title" style="margin-top:18px">Otras enfermedades o condiciones</div>
+              <div class="condition-entry"><input id="otherConditionInput" type="text" placeholder="Ej. lupus, hipotiroidismo, gota"><button class="btn" id="addConditionBtn" type="button">Añadir</button></div>
+              <input id="otherConditions" data-key="otherConditions" type="hidden" value="[]">
+              <div id="otherConditionTags" class="condition-tags" aria-live="polite"></div>
+              <div class="note">Puede escribir varias condiciones separadas por coma, punto y coma o una por línea. También puede pulsar Enter después de cada una.</div>
               <div class="grid" style="margin-top:18px"><div class="field span-12"><label>Tratamientos y observaciones</label><textarea data-key="notes" placeholder="Fármacos, dosis, contexto de la medición, ayuno, enfermedad intercurrente, cambios terapéuticos…"></textarea></div></div>
               <div class="form-actions">
                 <button class="btn primary" type="submit">Guardar visita</button>
@@ -262,9 +270,9 @@
       </div>
 
       <div class="stack right">
-        <section class="card">
-          <div class="card-head"><div><h2>Perfil clínico conectado</h2><p>Favorable a la izquierda · mayor atención a la derecha</p></div><button class="btn small" id="refreshBtn" type="button">Actualizar</button></div>
-          <div class="card-body"><div id="profileCompareControls"></div><div id="profileMap"><div class="empty"><strong>Introduzca datos clínicos</strong>El mapa aparecerá conforme se completen los campos.</div></div><p class="profile-note">La línea conecta posiciones normalizadas de indicadores distintos para mostrar la forma del perfil; no implica equivalencia, causalidad ni una puntuación global. Los marcadores contextuales sin umbral validado no se incorporan a la línea.</p></div>
+        <section class="card" id="profileCard">
+          <div class="card-head"><div><h2>Perfil clínico conectado</h2><p>Posición visual normalizada de izquierda a derecha</p></div><div class="map-card-actions"><button class="btn small" id="mapPdfBtn" type="button" title="Guardar el mapa en PDF">⇩ <span>PDF</span></button><button class="btn small" id="refreshBtn" type="button">↻ <span>Actualizar</span></button></div></div>
+          <div class="card-body"><div id="profileMap"><div class="empty"><strong>Introduzca datos clínicos</strong>El mapa aparecerá conforme se completen los campos.</div></div><p class="profile-note">La línea conecta posiciones normalizadas de indicadores distintos para mostrar la forma del perfil; no implica equivalencia, causalidad ni una puntuación global. Los marcadores contextuales sin umbral validado no se incorporan a la línea.</p></div>
         </section>
 
         <section class="card">
@@ -273,7 +281,7 @@
         </section>
 
         <section class="card">
-          <div class="card-head"><div><h2>Tendencia por indicador</h2><p>Valores reales a través del tiempo</p></div></div>
+          <div class="card-head"><div><h2>Tendencia por indicador</h2><p>Valores reales a través del tiempo</p></div><button class="btn small" id="trendPdfBtn" type="button" title="Guardar todas las tendencias en PDF">⇩ <span>PDF de tendencias</span></button></div>
           <div class="card-body"><div class="trend-controls"><label for="trendMetricSelect">Indicador</label><select id="trendMetricSelect"></select></div><div id="trendChart" class="trend-chart"><div class="empty"><strong>Sin tendencia disponible</strong>Se necesitan al menos dos visitas con el mismo indicador.</div></div></div>
         </section>
 
@@ -297,8 +305,8 @@
       <h3>Propósito</h3><p>Herramienta clínica de organización y seguimiento. No diagnostica, no sustituye juicio clínico y no es una calculadora validada de riesgo cardiovascular.</p>
       <h3>Grasa visceral estimada</h3><p>Modelo de Samouda et al. (Obesity, 2013): usa cintura, muslo proximal, edad y, en mujeres, IMC. El resultado es un área estimada en cm² y posee error individual amplio. La medición directa requiere imagen.</p>
       <h3>Energía</h3><p>El GER se estima con Mifflin–St Jeor y el GET con un multiplicador de actividad. Ambas cifras deben recalibrarse según evolución real. El factor de actividad no equivale sólo al ejercicio programado.</p>
-      <h3>Colores y perfil conectado</h3><p>Los colores representan atención clínica según reglas transparentes, metas configurables o categorías habituales. La línea conecta la posición normalizada de indicadores diferentes para mostrar la forma del perfil, pero no los convierte en una escala común, no expresa causalidad y no constituye una puntuación global. Los marcadores contextuales sin umbral validado quedan fuera de la línea. Verde no significa riesgo cero y rojo no establece diagnóstico. Las metas lipídicas deben individualizarse.</p>
-      <h3>Marcadores con interpretación especial</h3><ul><li>HDL-C se muestra como contexto, no como objetivo de tratamiento ni bajo la lógica “más alto siempre es mejor”.</li><li>HOMA-IR no tiene un punto de corte universal y no recibe clasificación cromática.</li><li>TFGe de 60–89 mL/min/1.73 m² sin otros marcadores no diagnostica ERC.</li><li>FIB-4 tiene rendimiento limitado antes de los 35 años; en mayores de 65 años se ajusta el punto de corte inferior.</li><li>Lp(a) no se convierte automáticamente entre mg/dL y nmol/L.</li><li>PCR-us ≥10 mg/L requiere valorar infección/inflamación y repetición en estabilidad clínica.</li></ul>
+      <h3>Colores y perfil conectado</h3><p>Los colores ubican cada medición según los intervalos escritos junto a la variable; el mapa no añade palabras como “normal”, “elevado” o “atención”. La línea conecta la posición normalizada de indicadores diferentes para mostrar la forma del perfil, pero no los convierte en una escala común, no expresa causalidad y no constituye una puntuación global. Los marcadores contextuales sin umbral validado quedan fuera de la línea. El color no establece diagnóstico. Las metas lipídicas son seleccionadas manualmente por el médico.</p>
+      <h3>Marcadores con interpretación especial</h3><ul><li>HDL-C se muestra como contexto, no como objetivo de tratamiento ni bajo la lógica “más alto siempre es mejor”.</li><li>HOMA-IR no tiene un punto de corte universal y no recibe clasificación cromática.</li><li>Riñón usa las categorías KDIGO G1–G5 para TFGe y A1–A3 para UACR; una medición aislada no establece cronicidad.</li><li>FIB-4 tiene rendimiento limitado antes de los 35 años; en mayores de 65 años se ajusta el punto de corte inferior.</li><li>Lp(a) no se convierte automáticamente entre mg/dL y nmol/L.</li><li>PCR-us ≥10 mg/L requiere valorar infección/inflamación y repetición en estabilidad clínica.</li></ul>
       <h3>Privacidad</h3><p>La persistencia utiliza almacenamiento local del navegador. Borrar datos del navegador puede eliminar el historial. Exporte respaldos cifrados o resguardados por usted y no utilice identificadores directos.</p>
       <h3>Fuentes metodológicas principales</h3><ul>
         <li><a href="https://doi.org/10.1002/oby.20033" target="_blank" rel="noopener">Samouda et al. Modelo antropométrico VAT, DOI 10.1002/oby.20033</a>.</li>
@@ -307,15 +315,25 @@
         <li><a href="https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf" target="_blank" rel="noopener">KDIGO 2024. Evaluación y manejo de enfermedad renal crónica</a>.</li>
         <li><a href="https://pubmed.ncbi.nlm.nih.gov/38851997/" target="_blank" rel="noopener">EASL–EASD–EASO 2024. Guía MASLD, PMID 38851997</a>.</li>
         <li><a href="https://professional.heart.org/en/guidelines-statements/2026-ahaaccadaasn-guideline-for-the-prevention-detection-evaluation-andcir0000000000001453" target="_blank" rel="noopener">AHA/ACC/ADA/ASN 2026. Guía de síndrome CKM</a>.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/41824590/" target="_blank" rel="noopener">ACC/AHA 2026. Guía de dislipidemia, PMID 41824590</a>.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/39256087/" target="_blank" rel="noopener">NLA 2024. Consenso clínico sobre ApoB, PMID 39256087</a>.</li>
       </ul>
-      <p><strong>Versión clínica 1.1.</strong> Los puntos de corte deben revisarse cuando cambien las guías o cuando se utilice la herramienta en poblaciones especiales.</p>
+      <p><strong>Versión clínica 1.3.</strong> Los puntos de corte deben revisarse cuando cambien las guías o cuando se utilice la herramienta en poblaciones especiales.</p>
+    </div></div>
+  </div>
+
+  <div class="modal" id="mapPdfModal" role="dialog" aria-modal="true" aria-labelledby="mapPdfTitle">
+    <div class="modal-box"><header><h2 id="mapPdfTitle">Elegir mapas para el PDF</h2><button class="btn small" id="closeMapPdfModal" type="button">Cerrar</button></header><div class="modal-content">
+      <p>Cada consulta seleccionada se generará como un mapa independiente en su propia página.</p>
+      <div class="pdf-choice-list" id="mapPdfChoices"></div>
+      <div class="modal-actions"><button class="btn" id="mapPdfSelectAllBtn" type="button">Seleccionar todas</button><button class="btn primary" id="generateMapPdfBtn" type="button">Generar PDF</button></div>
     </div></div>
   </div>
 
   <script>
   (() => {
     'use strict';
-    const APP_VERSION = '1.1.0';
+    const APP_VERSION = '1.3.0';
     const STORAGE_KEY = 'crm-health-map-v1';
     const $ = (s, root=document) => root.querySelector(s);
     const $$ = (s, root=document) => [...root.querySelectorAll(s)];
@@ -323,9 +341,6 @@
     const toastEl = $('#toast');
     let toastTimer;
     let loadedVisitId = null;
-    let selectedCompareIds = new Set();
-    let comparisonPatientCode = '';
-    const comparisonColors = ['#687887','#3d6f98','#9b6f3d','#7d6699'];
 
     const nf = new Intl.NumberFormat('es-MX', {maximumFractionDigits:1});
     const nfi = new Intl.NumberFormat('es-MX', {maximumFractionDigits:0});
@@ -347,24 +362,24 @@
       $('#workspace').hidden=true; $('#patientHome').hidden=false; $('#printBtn').hidden=true; renderPatientHome(); window.scrollTo({top:0,behavior:'smooth'});
     }
     function showWorkspace(){
-      $('#patientHome').hidden=true; $('#workspace').hidden=false; $('#printBtn').hidden=false; $('#workspacePatientCode').textContent=$('#patientCode').value.trim()||'Nuevo'; calculate(); renderHistory(); requestAnimationFrame(drawProfileLines); window.scrollTo({top:0,behavior:'smooth'});
+      $('#patientHome').hidden=true; $('#workspace').hidden=false; $('#printBtn').hidden=false; $('#workspacePatientCode').textContent=$('#patientCode').value.trim()||'Nuevo'; calculate(); renderHistory(); window.scrollTo({top:0,behavior:'smooth'});
     }
-    function blankDefaults(){ return {patientCode:'',visitDate:today(),activityFactor:'1.4',energyGoal:'deficit',goalPercent:'20',lpaUnit:'nmol/L',ldlTarget:'100',nonHdlTarget:'130',apobTarget:'90',astUln:'35',altUln:'35',ggtUln:'55',targetContext:'custom'}; }
+    function blankDefaults(){ return {patientCode:'',visitDate:today(),activityFactor:'1.4',energyGoal:'deficit',goalPercent:'20',lpaUnit:'nmol/L',ldlTarget:'100',nonHdlTarget:'130',apobTarget:'90',astUln:'35',altUln:'',ggtUln:'55',targetContext:'custom',otherConditions:[]}; }
     function startNewPatient(){
-      form.reset(); fill(blankDefaults()); setPatientCode('',false); loadedVisitId=null; selectedCompareIds.clear(); comparisonPatientCode=''; showWorkspace(); setTimeout(()=>$('#patientCode').focus(),100);
+      form.reset(); fill(blankDefaults()); setPatientCode('',false); loadedVisitId=null; showWorkspace(); setTimeout(()=>$('#patientCode').focus(),100);
     }
     function stableFieldsFrom(d={}){
-      const keys=['sex','age','height','lpa','lpaUnit','ldlTarget','nonHdlTarget','apobTarget','astUln','altUln','ggtUln','targetContext','formerSmoking','diabetes','hypertension','ckd','masld','ascvd','heartFailure','osa','familyHistory'];
+      const keys=['sex','age','height','lpa','lpaUnit','ldlTarget','nonHdlTarget','apobTarget','astUln','altUln','ggtUln','targetContext','formerSmoking','diabetes','hypertension','ckd','masld','ascvd','heartFailure','osa','familyHistory','otherConditions'];
       const out=blankDefaults(); keys.forEach(k=>{if(k in d)out[k]=d[k]}); return out;
     }
     function openPatient(code){
       const p=readDB().patients[code]; if(!p?.visits?.length)return;
-      const v=p.visits[p.visits.length-1]; form.reset(); fill(v.data); setPatientCode(code,true); loadedVisitId=v.id; initializeComparisons(code); showWorkspace();
+      const v=p.visits[p.visits.length-1]; form.reset(); fill(v.data); setPatientCode(code,true); loadedVisitId=v.id; showWorkspace();
     }
     function startPatientVisit(code){
       const p=readDB().patients[code]; if(!p?.visits?.length)return;
       const latest=p.visits[p.visits.length-1], next={...stableFieldsFrom(latest.data),patientCode:code,visitDate:today()};
-      form.reset(); fill(next); setPatientCode(code,true); loadedVisitId=null; initializeComparisons(code); showWorkspace(); toast('Nueva visita preparada; complete las mediciones actuales.');
+      form.reset(); fill(next); setPatientCode(code,true); loadedVisitId=null; showWorkspace(); toast('Nueva visita preparada; complete las mediciones actuales.');
     }
     function renderPatientHome(){
       const db=readDB(), entries=Object.entries(db.patients).filter(([,p])=>p?.visits?.length).sort((a,b)=>(b[1].visits.at(-1)?.data.visitDate||'').localeCompare(a[1].visits.at(-1)?.data.visitDate||''));
@@ -377,16 +392,28 @@
 
     function collect(){
       const d={};
-      $$('[data-key]',form).forEach(el=>{ d[el.dataset.key]=el.type==='checkbox' ? el.checked : el.value; });
+      $$('[data-key]',form).forEach(el=>{ d[el.dataset.key]=el.type==='checkbox' ? el.checked : el.dataset.key==='otherConditions' ? conditionList(el.value) : el.value; });
       return d;
     }
     function fill(d={}){
       $$('[data-key]',form).forEach(el=>{
         if(!(el.dataset.key in d)) return;
-        if(el.type==='checkbox') el.checked=Boolean(d[el.dataset.key]); else el.value=d[el.dataset.key] ?? '';
+        if(el.type==='checkbox') el.checked=Boolean(d[el.dataset.key]); else if(el.dataset.key==='otherConditions')el.value=JSON.stringify(conditionList(d[el.dataset.key]));else el.value=d[el.dataset.key] ?? '';
       });
-      syncControls(); calculate(); renderHistory();
+      renderOtherConditionTags();syncControls(); calculate(); renderHistory();
     }
+
+    function conditionList(value){
+      let items=value;if(Array.isArray(value))items=value;else if(typeof value==='string'){try{const parsed=JSON.parse(value);items=Array.isArray(parsed)?parsed:value.split(/[,;\n]+/)}catch{items=value.split(/[,;\n]+/)}}else items=[];
+      const seen=new Set();return items.map(x=>String(x).trim()).filter(Boolean).filter(x=>{const key=x.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();if(seen.has(key))return false;seen.add(key);return true});
+    }
+    function renderOtherConditionTags(){
+      const hidden=$('#otherConditions'),box=$('#otherConditionTags'),items=conditionList(hidden.value);hidden.value=JSON.stringify(items);box.innerHTML=items.map((x,i)=>`<span class="condition-tag">${esc(x)}<button type="button" data-remove-condition="${i}" aria-label="Quitar ${esc(x)}">×</button></span>`).join('');
+      $$('[data-remove-condition]',box).forEach(b=>b.onclick=()=>{const next=conditionList(hidden.value);next.splice(Number(b.dataset.removeCondition),1);hidden.value=JSON.stringify(next);renderOtherConditionTags();calculate()});
+    }
+    function addOtherConditions(){const input=$('#otherConditionInput'),next=[...conditionList($('#otherConditions').value),...conditionList(input.value)];$('#otherConditions').value=JSON.stringify(conditionList(next));input.value='';renderOtherConditionTags();calculate();input.focus();}
+    function normalizedText(value){return String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
+    function hasCondition(d,term){const needle=normalizedText(term);return conditionList(d.otherConditions).some(x=>normalizedText(x).includes(needle))}
 
     function bmi(d){ const h=num(d.height); const w=num(d.weight); return h&&w ? w/Math.pow(h/100,2) : null; }
     function whtr(d){ const h=num(d.height), w=num(d.waist); return h&&w ? w/h : null; }
@@ -418,50 +445,56 @@
       return 135*Math.pow(Math.min(scr/k,1),alpha)*Math.pow(Math.max(scr/k,1),-.544)*Math.pow(Math.min(scys/.8,1),-.323)*Math.pow(Math.max(scys/.8,1),-.778)*Math.pow(.9961,age)*(female?.963:1);
     }
     function fib4(d){ const age=num(d.age),ast=num(d.ast),alt=num(d.alt),p=num(d.platelets); return age&&ast&&alt&&p ? age*ast/(p*Math.sqrt(alt)) : null; }
+    function aerobicEquivalent(d){const moderate=num(d.aerobicMinutes),vigorous=num(d.vigorousMinutes);return moderate===null&&vigorous===null?null:(moderate||0)+2*(vigorous||0)}
+    function egfrCategory(v){if(!finite(v))return null;return v>=90?'G1':v>=60?'G2':v>=45?'G3a':v>=30?'G3b':v>=15?'G4':'G5'}
+    function uacrCategory(v){if(!finite(v))return null;return v<30?'A1':v<=300?'A2':'A3'}
     function derived(d){
       const eCr=egfr(d), eCrCys=egfrCrCys(d);
-      return {bmi:bmi(d),whtr:whtr(d),vat:vat(d)?.value??null,vatSee:vat(d)?.see??null,ree:ree(d),tdee:tdee(d),energyTarget:energyTarget(d),nonHdl:nonHdl(d),homa:homa(d),pulsePressure:pulsePressure(d),egfr:eCr,egfrCrCys:eCrCys,egfrMap:eCrCys??eCr,fib4:fib4(d)};
+      const egfrMap=eCrCys??eCr;return {bmi:bmi(d),whtr:whtr(d),vat:vat(d)?.value??null,vatSee:vat(d)?.see??null,ree:ree(d),tdee:tdee(d),energyTarget:energyTarget(d),nonHdl:nonHdl(d),homa:homa(d),pulsePressure:pulsePressure(d),egfr:eCr,egfrCrCys:eCrCys,egfrMap,egfrCategory:egfrCategory(egfrMap),uacrCategory:uacrCategory(num(d.uacr)),aerobicEquivalent:aerobicEquivalent(d),fib4:fib4(d)};
     }
 
-    const statusText={good:'En rango',watch:'Vigilar',high:'Elevado',danger:'Atención',neutral:'Contexto'};
     const metrics = [
-      {group:'Adiposidad',key:'weight',label:'Peso',unit:'kg',min:40,max:180,classify:()=> 'neutral',note:'Interpretar mediante su evolución individual'},
-      {group:'Adiposidad',key:'bmi',label:'IMC',unit:'kg/m²',source:'derived',min:15,max:45,kind:'bidirectional',classify:(v)=>v<18.5?'high':v<25?'good':v<30?'watch':v<35?'high':'danger'},
-      {group:'Adiposidad',key:'waist',label:'Cintura',unit:'cm',min:55,max:145,classify:(v,d)=>d.sex==='female'?(v<80?'good':v<88?'watch':'danger'):(v<94?'good':v<102?'watch':'danger')},
-      {group:'Adiposidad',key:'whtr',label:'Cintura/estatura',unit:'',source:'derived',min:.35,max:.75,classify:v=>v<.4?'watch':v<.5?'good':v<.6?'high':'danger'},
-      {group:'Adiposidad',key:'vat',label:'VAT estimado',unit:'cm²',source:'derived',min:20,max:250,classify:v=>v<0?'neutral':v<100?'good':v<130?'watch':'danger'},
-      {group:'Hemodinámica y capacidad',key:'sbp',label:'Presión sistólica',unit:'mmHg',min:75,max:180,kind:'bidirectional',classify:v=>v<90?'danger':v<120?'good':v<130?'watch':v<140?'high':'danger'},
-      {group:'Hemodinámica y capacidad',key:'dbp',label:'Presión diastólica',unit:'mmHg',min:45,max:115,kind:'bidirectional',classify:v=>v<60?'high':v<80?'good':v<90?'high':'danger'},
-      {group:'Hemodinámica y capacidad',key:'restingHR',label:'FC en reposo',unit:'lpm',min:35,max:115,kind:'bidirectional',classify:v=>v<50?'watch':v<70?'good':v<80?'watch':v<100?'high':'danger'},
-      {group:'Hemodinámica y capacidad',key:'steps',label:'Pasos diarios',unit:'',min:0,max:15000,kind:'reverse',classify:v=>v<3000?'danger':v<5000?'high':v<7500?'watch':'good'},
-      {group:'Hemodinámica y capacidad',key:'aerobicMinutes',label:'Actividad aeróbica',unit:'min/sem',min:0,max:300,kind:'reverse',classify:v=>v<75?'high':v<150?'watch':'good',note:'La intensidad modifica la interpretación'},
-      {group:'Hemodinámica y capacidad',key:'strengthSessions',label:'Sesiones de fuerza',unit:'sem',min:0,max:5,kind:'reverse',classify:v=>v===0?'high':v<2?'watch':'good'},
-      {group:'Sueño y conducta',key:'sleepHours',label:'Duración de sueño',unit:'h',min:4,max:11,kind:'bidirectional',classify:v=>v<6||v>10?'high':v<7||v>9?'watch':'good'},
-      {group:'Sueño y conducta',key:'sittingHours',label:'Tiempo sentado',unit:'h/día',min:2,max:14,classify:()=> 'neutral',note:'Contextualizar con actividad total'},
-      {group:'Glucosa',key:'glucose',label:'Glucosa en ayuno',unit:'mg/dL',min:55,max:180,kind:'bidirectional',classify:v=>v<70?'danger':v<100?'good':v<126?'high':'danger'},
-      {group:'Glucosa',key:'hba1c',label:'HbA1c',unit:'%',min:4,max:10,classify:v=>v<5.7?'good':v<6.5?'high':'danger'},
-      {group:'Glucosa',key:'homa',label:'HOMA-IR',unit:'',source:'derived',min:0,max:6,classify:()=> 'neutral',note:'Sin punto de corte universal'},
-      {group:'Carga aterogénica',key:'ldl',label:'LDL-C',unit:'mg/dL',min:30,max:220,classify:(v,d)=>targetClass(v,num(d.ldlTarget)||100)},
-      {group:'Carga aterogénica',key:'nonHdl',label:'No-HDL-C',unit:'mg/dL',source:'derived',min:40,max:260,classify:(v,d)=>targetClass(v,num(d.nonHdlTarget)||130)},
-      {group:'Carga aterogénica',key:'apob',label:'ApoB',unit:'mg/dL',min:30,max:180,classify:(v,d)=>targetClass(v,num(d.apobTarget)||90)},
-      {group:'Carga aterogénica',key:'tg',label:'Triglicéridos',unit:'mg/dL',min:40,max:550,classify:v=>v<100?'good':v<150?'watch':v<200?'high':v<500?'high':'danger'},
-      {group:'Carga aterogénica',key:'lpa',label:'Lipoproteína(a)',unit:d=>d.lpaUnit||'nmol/L',min:0,max:250,classify:(v,d)=>d.lpaUnit==='mg/dL'?(v<30?'good':v<50?'watch':'danger'):(v<75?'good':v<125?'watch':'danger')},
-      {group:'Carga aterogénica',key:'hdl',label:'HDL-C',unit:'mg/dL',min:20,max:110,classify:()=> 'neutral',note:'Biomarcador contextual; no meta terapéutica'},
-      {group:'Riñón',key:'egfrMap',label:'TFGe CKD-EPI 2021',unit:'mL/min/1.73 m²',source:'derived',min:15,max:120,kind:'reverse',classify:v=>v>=90?'good':v>=60?'watch':v>=45?'high':'danger',note:'Combinada si hay cistatina C'},
-      {group:'Riñón',key:'uacr',label:'UACR',unit:'mg/g',min:0,max:500,classify:v=>v<30?'good':v<300?'high':'danger'},
-      {group:'Riñón',key:'uricAcid',label:'Ácido úrico',unit:'mg/dL',min:2,max:12,classify:(v,d)=>v<=(d.sex==='female'?6:7)?'good':v<9?'watch':'high'},
-      {group:'Hígado',key:'alt',label:'ALT',unit:'U/L',min:5,max:150,classify:(v,d)=>ulnClass(v,num(d.altUln)||35)},
-      {group:'Hígado',key:'ast',label:'AST',unit:'U/L',min:5,max:150,classify:(v,d)=>ulnClass(v,num(d.astUln)||35)},
-      {group:'Hígado',key:'ggt',label:'GGT',unit:'U/L',min:5,max:220,classify:(v,d)=>ulnClass(v,num(d.ggtUln)||55)},
-      {group:'Hígado',key:'fib4',label:'FIB-4',unit:'',source:'derived',min:0,max:4,classify:(v,d)=>{const a=num(d.age);if(a<35)return'neutral';const low=a>65?2:1.3;return v<low?'good':v<2.67?'watch':'danger';},note:'Validez limitada <35 años'},
-      {group:'Inflamación',key:'hscrp',label:'PCR ultrasensible',unit:'mg/L',min:0,max:12,classify:v=>v<1?'good':v<3?'watch':v<10?'high':'danger'}
+      {group:'Adiposidad',key:'weight',label:'Peso',unit:'kg',min:40,max:180,classify:()=> 'neutral',range:'evolución individual; sin corte universal'},
+      {group:'Adiposidad',key:'bmi',label:'IMC',unit:'kg/m²',source:'derived',min:15,max:45,kind:'bidirectional',range:'bajo <18.5; normal 18.5–24.9; sobrepeso 25–29.9; obesidad ≥30',classify:v=>v<18.5?'high':v<25?'good':v<30?'watch':v<35?'high':'danger'},
+      {group:'Adiposidad',key:'waist',label:'Cintura',unit:'cm',min:55,max:145,range:d=>d.sex==='female'?'mujer: menor riesgo <80; aumentado 80–87.9; alto ≥88':d.sex==='male'?'hombre: menor riesgo <94; aumentado 94–101.9; alto ≥102':'mujer: <80 / 80–87.9 / ≥88; hombre: <94 / 94–101.9 / ≥102',classify:(v,d)=>d.sex==='female'?(v<80?'good':v<88?'watch':'danger'):d.sex==='male'?(v<94?'good':v<102?'watch':'danger'):'neutral'},
+      {group:'Adiposidad',key:'whtr',label:'Cintura/estatura',unit:'',source:'derived',min:.35,max:.75,range:'baja <0.40; favorable 0.40–0.49; adiposidad central ≥0.50; marcada ≥0.60',classify:v=>v<.4?'watch':v<.5?'good':v<.6?'high':'danger'},
+      {group:'Adiposidad',key:'vat',label:'VAT estimado',unit:'cm²',source:'derived',min:20,max:250,range:'referencia antropométrica <100; 100–129; ≥130 cm²; cortes no universales',classify:v=>v<0?'neutral':v<100?'good':v<130?'watch':'danger'},
+      {group:'Hemodinámica y capacidad',key:'sbp',label:'Presión sistólica',unit:'mmHg',min:75,max:180,kind:'bidirectional',range:'baja <90; <120; 120–129; 130–139; ≥140',classify:v=>v<90?'danger':v<120?'good':v<130?'watch':v<140?'high':'danger'},
+      {group:'Hemodinámica y capacidad',key:'dbp',label:'Presión diastólica',unit:'mmHg',min:45,max:115,kind:'bidirectional',range:'baja <60; <80; 80–89; ≥90',classify:v=>v<60?'high':v<80?'good':v<90?'high':'danger'},
+      {group:'Hemodinámica y capacidad',key:'restingHR',label:'FC en reposo',unit:'lpm',min:35,max:115,kind:'bidirectional',range:'<50 o ≥100 requiere contexto; 50–79 habitual; 80–99 interpretar clínicamente',classify:v=>v<50?'watch':v<80?'good':v<100?'high':'danger'},
+      {group:'Hemodinámica y capacidad',key:'steps',label:'Pasos diarios',unit:'',min:0,max:15000,kind:'reverse',range:'bajos <6,000; ideal 6,000–10,000; >10,000 interpretar en contexto',classify:v=>v<3000?'danger':v<6000?'high':'good'},
+      {group:'Hemodinámica y capacidad',key:'aerobicEquivalent',label:'Actividad aeróbica equivalente',unit:'min-equiv/sem',source:'derived',min:0,max:600,kind:'reverse',range:'insuficiente <150; recomendada 150–300; >300 beneficio adicional',classify:v=>v<75?'high':v<150?'watch':'good',note:'moderada + 2 × vigorosa'},
+      {group:'Hemodinámica y capacidad',key:'strengthSessions',label:'Sesiones de fuerza',unit:'ses/sem',min:0,max:5,kind:'reverse',range:'ninguna 0; parcial 1; recomendadas ≥2',classify:v=>v===0?'high':v<2?'watch':'good'},
+      {group:'Sueño y conducta',key:'sleepHours',label:'Duración de sueño',unit:'h',min:4,max:11,kind:'bidirectional',range:'corta <7; habitual 7–9; prolongada >9; individualizar',classify:v=>v<6||v>10?'high':v<7||v>9?'watch':'good'},
+      {group:'Sueño y conducta',key:'sittingHours',label:'Tiempo sentado',unit:'h/día',min:2,max:14,classify:()=> 'neutral',range:'contextualizar con actividad total; sin corte clínico universal'},
+      {group:'Glucosa',key:'glucose',label:'Glucosa en ayuno',unit:'mg/dL',min:55,max:180,kind:'bidirectional',range:'hipoglucemia <70; normal 70–99; prediabetes 100–125; diabetes ≥126',classify:v=>v<70?'danger':v<100?'good':v<126?'high':'danger'},
+      {group:'Glucosa',key:'hba1c',label:'HbA1c',unit:'%',min:4,max:10,range:'normal <5.7; prediabetes 5.7–6.4; diabetes ≥6.5',classify:v=>v<5.7?'good':v<6.5?'high':'danger'},
+      {group:'Glucosa',key:'homa',label:'HOMA-IR',unit:'',source:'derived',min:0,max:6,classify:()=> 'neutral',range:'sin punto de corte universal; depende de población y ensayo'},
+      {group:'Carga aterogénica',key:'ldl',label:'LDL-C',unit:'mg/dL',min:30,max:220,targetKey:'ldlTarget',targetDefault:100,range:d=>`meta clínica seleccionada <${num(d.ldlTarget)||100} mg/dL`,classify:(v,d)=>targetClass(v,num(d.ldlTarget)||100)},
+      {group:'Carga aterogénica',key:'nonHdl',label:'No-HDL-C',unit:'mg/dL',source:'derived',min:40,max:260,targetKey:'nonHdlTarget',targetDefault:130,range:d=>`meta clínica seleccionada <${num(d.nonHdlTarget)||130} mg/dL`,classify:(v,d)=>targetClass(v,num(d.nonHdlTarget)||130)},
+      {group:'Carga aterogénica',key:'apob',label:'ApoB',unit:'mg/dL',min:30,max:180,targetKey:'apobTarget',targetDefault:90,range:d=>`meta clínica seleccionada <${num(d.apobTarget)||90} mg/dL`,classify:(v,d)=>targetClass(v,num(d.apobTarget)||90)},
+      {group:'Carga aterogénica',key:'tg',label:'Triglicéridos',unit:'mg/dL',min:40,max:550,range:'deseable <150; limítrofe 150–199; alto 200–499; muy alto ≥500',classify:v=>v<150?'good':v<200?'watch':v<500?'high':'danger'},
+      {group:'Carga aterogénica',key:'lpa',label:'Lipoproteína(a)',unit:d=>d.lpaUnit||'nmol/L',min:0,max:250,range:d=>d.lpaUnit==='mg/dL'?'<30; intermedia 30–49; alta ≥50 mg/dL':'<75; intermedia 75–124; alta ≥125 nmol/L',classify:(v,d)=>d.lpaUnit==='mg/dL'?(v<30?'good':v<50?'watch':'danger'):(v<75?'good':v<125?'watch':'danger')},
+      {group:'Carga aterogénica',key:'hdl',label:'HDL-C',unit:'mg/dL',min:20,max:110,classify:()=> 'neutral',range:'biomarcador contextual; no meta terapéutica'},
+      {group:'Riñón',key:'egfrMap',label:'TFGe CKD-EPI 2021',unit:'mL/min/1.73 m²',source:'derived',min:0,max:120,kind:'reverse',range:'KDIGO G1 ≥90; G2 60–89; G3a 45–59; G3b 30–44; G4 15–29; G5 <15',classify:v=>v>=60?'good':v>=45?'watch':v>=30?'high':'danger',note:'combinada si hay cistatina C'},
+      {group:'Riñón',key:'uacr',label:'UACR',unit:'mg/g',min:0,max:500,range:'KDIGO A1 <30; A2 30–300; A3 >300',classify:v=>v<30?'good':v<=300?'watch':'danger'},
+      {group:'Riñón',key:'uricAcid',label:'Ácido úrico',unit:'mg/dL',min:2,max:12,kind:'bidirectional',range:d=>hasCondition(d,'gota')?'gota: meta <6 mg/dL':'referencia habitual: mujer 2.4–6; hombre 3.4–7 mg/dL',classify:(v,d)=>{if(hasCondition(d,'gota'))return v<6?'good':v<9?'watch':'high';const lo=d.sex==='female'?2.4:3.4,hi=d.sex==='female'?6:7;return v<lo?'high':v<=hi?'good':v<9?'watch':'high'}},
+      {group:'Hígado',key:'alt',label:'ALT',unit:'U/L',min:5,max:150,range:d=>`LSN ${effectiveAltUln(d)} U/L; >1–2 × LSN; >2 × LSN`,classify:(v,d)=>ulnClass(v,effectiveAltUln(d))},
+      {group:'Hígado',key:'ast',label:'AST',unit:'U/L',min:5,max:150,range:d=>`LSN ${num(d.astUln)||35} U/L; >1–2 × LSN; >2 × LSN`,classify:(v,d)=>ulnClass(v,num(d.astUln)||35)},
+      {group:'Hígado',key:'ggt',label:'GGT',unit:'U/L',min:5,max:220,range:d=>`LSN ${num(d.ggtUln)||55} U/L; >1–2 × LSN; >2 × LSN`,classify:(v,d)=>ulnClass(v,num(d.ggtUln)||55)},
+      {group:'Hígado',key:'fib4',label:'FIB-4',unit:'',source:'derived',min:0,max:4,range:d=>num(d.age)<35?'validez limitada <35 años':num(d.age)>65?'bajo <2.0; intermedio 2.0–2.66; alto ≥2.67':'bajo <1.3; intermedio 1.3–2.66; alto ≥2.67',classify:(v,d)=>{const a=num(d.age);if(a<35)return'neutral';const low=a>65?2:1.3;return v<low?'good':v<2.67?'watch':'danger';}},
+      {group:'Inflamación',key:'hscrp',label:'PCR ultrasensible',unit:'mg/L',min:0,max:12,range:'<1; 1–2.9; 3–9.9; ≥10 valorar inflamación aguda y repetir',classify:v=>v<1?'good':v<3?'watch':v<10?'high':'danger'}
     ];
-    function targetClass(v,t){ const excess=v-t; return excess<=0?'good':excess<30?'watch':excess<60?'high':'danger'; }
+    function effectiveAltUln(d){return num(d.altUln)||(d.sex==='female'?25:33)}
+    function targetClass(v,t){const ratio=v/t;return ratio<1?'good':ratio<1.25?'watch':ratio<1.5?'high':'danger'}
     function ulnClass(v,u){ const r=v/u; return r<=1?'good':r<=2?'high':'danger'; }
     function valueFor(m,d,der){ return m.source==='derived' ? num(der[m.key]) : num(d[m.key]); }
     function unitFor(m,d){ return typeof m.unit==='function'?m.unit(d):m.unit; }
+    function rangeFor(m,d){return typeof m.range==='function'?m.range(d):m.range||''}
+    function targetPosition(v,t){const ratio=v/t;return ratio<1?clamp(5+ratio*27,3,32):clamp(35+(ratio-1)*63,35,98)}
     function profilePosition(m,v,d){
       const st=m.classify(v,d); if(st==='neutral')return 50;
+      if(m.targetKey)return targetPosition(v,num(d[m.targetKey])||m.targetDefault);
       const center={good:12,watch:37,high:62,danger:88}[st]??50;
       let raw=clamp((v-m.min)/(m.max-m.min),0,1); if(m.kind==='reverse')raw=1-raw;
       return clamp(center+(raw-.5)*10,2,98);
@@ -497,6 +530,7 @@
       if(der.nonHdl!==null)x.push(resultCard('No-HDL-C',`${nf.format(der.nonHdl)} mg/dL`,'Colesterol total − HDL-C'));
       if(der.egfr!==null)x.push(resultCard('TFGe creatinina',`${nfi.format(der.egfr)}`,'mL/min/1.73 m² · CKD-EPI 2021'));
       if(der.egfrCrCys!==null)x.push(resultCard('TFGe combinada',`${nfi.format(der.egfrCrCys)}`,'Creatinina–cistatina C · CKD-EPI 2021'));
+      if(der.egfrCategory||der.uacrCategory)x.push(resultCard('Categoría KDIGO',`${der.egfrCategory||'G—'} / ${der.uacrCategory||'A—'}`,'Una medición aislada no establece enfermedad renal crónica'));
       if(der.fib4!==null)x.push(resultCard('FIB-4',der.fib4.toFixed(2),num(d.age)<35?'Rendimiento limitado antes de 35 años':'Índice de fibrosis, no diagnóstico'));
       if(der.homa!==null)x.push(resultCard('HOMA-IR',der.homa.toFixed(2),'Sin punto de corte universal'));
       if(der.pulsePressure!==null)x.push(resultCard('Presión de pulso',`${nfi.format(der.pulsePressure)} mmHg`,'PAS − PAD'));
@@ -506,41 +540,61 @@
     function renderMap(d,der){
       const groups={}; let count=0;
       metrics.forEach(m=>{const v=valueFor(m,d,der);if(v===null)return;(groups[m.group]??=[]).push({m,v});count++;});
-      const flagDefs=[['smoking','Tabaquismo actual','danger'],['vaping','Vapeo actual','danger'],['formerSmoking','Exfumador','watch'],['highAlcohol','Consumo elevado de alcohol','high'],['diabetes','Diabetes conocida','high'],['hypertension','Hipertensión conocida','high'],['ckd','ERC conocida','high'],['masld','MASLD conocida','high'],['ascvd','ASCVD establecida','danger'],['heartFailure','Insuficiencia cardíaca','danger'],['osa','Apnea obstructiva del sueño','high'],['familyHistory','Historia familiar prematura','watch']];
-      const flags=flagDefs.filter(([k])=>d[k]).map(([,label,st])=>`<span class="flag ${st}">${label}</span>`).join('');
+      const flagDefs=[['smoking','Tabaquismo actual','exposure'],['vaping','Vapeo actual','exposure'],['formerSmoking','Exfumador','exposure'],['highAlcohol','Consumo elevado de alcohol','exposure'],['diabetes','Diabetes conocida','condition'],['hypertension','Hipertensión conocida','condition'],['ckd','ERC conocida','condition'],['masld','MASLD conocida','condition'],['ascvd','ASCVD establecida','condition'],['heartFailure','Insuficiencia cardíaca','condition'],['osa','Apnea obstructiva del sueño','condition'],['familyHistory','Historia familiar prematura','history']];
+      const structured=flagDefs.filter(([k])=>d[k]).map(([,label,type])=>({label,type}));conditionList(d.otherConditions).forEach(label=>structured.push({label,type:'condition'}));
+      const flags=structured.map(({label,type})=>`<span class="flag ${type}">${esc(label)}</span>`).join('');
       if(!count&&!flags){$('#profileMap').innerHTML='<div class="empty"><strong>Introduzca datos clínicos</strong>El mapa aparecerá conforme se completen los campos.</div>';return;}
       const mapHtml=Object.entries(groups).map(([g,items])=>`<div class="domain"><div class="domain-head"><h3>${g}</h3><span>${items.length} indicador${items.length===1?'':'es'}</span></div>${items.map(({m,v})=>{
         const st=m.classify(v,d),pos=profilePosition(m,v,d),unit=unitFor(m,d);
-        return `<div class="metric"><div class="metric-name">${m.label}<small>${m.note||''}</small></div><div class="track ${st==='neutral'?'neutral-track':''}" data-metric-key="${m.key}"><span class="marker" data-current-marker="1" data-profile-status="${st}" style="left:${pos}%" title="${esc(m.label)}: ${nf.format(v)} ${esc(unit)}"></span></div><div class="metric-value">${nf.format(v)} ${unit}<small class="status-${st}">${statusText[st]}</small></div></div>`;
+        return `<div class="metric"><div class="metric-name">${esc(m.label)} <span class="metric-range">(${esc(rangeFor(m,d))})</span>${m.note?`<span class="metric-note">${esc(m.note)}</span>`:''}</div><div class="metric-value">${nf.format(v)}${unit?' '+esc(unit):''}</div><div class="track ${st==='neutral'?'neutral-track':''}" data-metric-key="${m.key}"><span class="marker" data-current-marker="1" data-profile-status="${st}" style="left:${pos}%" title="${esc(m.label)}: ${nf.format(v)} ${esc(unit)}"></span></div></div>`;
       }).join('')}</div>`).join('');
-      $('#profileMap').innerHTML=`<div class="profile-stage"><svg class="profile-lines" aria-hidden="true"></svg>${mapHtml}${flags?`<div class="domain"><div class="domain-head"><h3>Exposiciones y enfermedad conocida</h3><span>Sin puntuación</span></div><div class="flag-grid">${flags}</div></div>`:''}</div>`;
+      const notes=String(d.notes||'').trim();$('#profileMap').innerHTML=`<div class="profile-stage"><svg class="profile-lines" aria-hidden="true"></svg>${mapHtml}${flags?`<div class="domain"><div class="domain-head"><h3>Exposiciones y enfermedades o condiciones conocidas</h3><span>Sin puntuación</span></div><div class="flag-grid">${flags}</div></div>`:''}${notes?`<div class="map-note"><strong>Tratamientos y observaciones</strong>${esc(notes)}</div>`:''}</div>`;
       requestAnimationFrame(drawProfileLines);
-    }
-
-    function initializeComparisons(code){
-      const p=readDB().patients[code]; comparisonPatientCode=code; selectedCompareIds.clear();
-      if(p?.visits?.length)[...p.visits].reverse().filter(v=>v.id!==loadedVisitId).slice(0,3).forEach(v=>selectedCompareIds.add(v.id));
-    }
-    function renderComparisonControls(){
-      const code=$('#patientCode').value.trim(),p=readDB().patients[code],box=$('#profileCompareControls');
-      if(!code||!p?.visits?.length){box.innerHTML='';return;}
-      if(comparisonPatientCode!==code)initializeComparisons(code);
-      const choices=[...p.visits].reverse().filter(v=>v.id!==loadedVisitId).slice(0,4);
-      if(!choices.length){box.innerHTML='';return;}
-      box.innerHTML=`<div class="profile-compare"><div class="profile-compare-title">Superponer consultas anteriores</div><div class="compare-options">${choices.map((v,i)=>`<label class="compare-option" style="--series-color:${comparisonColors[i]}"><input type="checkbox" data-compare-id="${v.id}" ${selectedCompareIds.has(v.id)?'checked':''}><span class="compare-swatch"></span>${formatDate(v.data.visitDate)}</label>`).join('')}</div></div>`;
-      $$('[data-compare-id]',box).forEach(input=>input.onchange=()=>{if(input.checked)selectedCompareIds.add(input.dataset.compareId);else selectedCompareIds.delete(input.dataset.compareId);drawProfileLines();});
     }
     function drawProfileLines(){
       const stage=$('.profile-stage',$('#profileMap')); if(!stage||$('#workspace').hidden)return;
       const svg=$('.profile-lines',stage),stageRect=stage.getBoundingClientRect(); if(!svg||!stageRect.width||!stageRect.height)return;
       svg.setAttribute('viewBox',`0 0 ${stageRect.width} ${stageRect.height}`);
       const pointFor=(track,pos)=>{const r=track.getBoundingClientRect();return [r.left-stageRect.left+r.width*pos/100,r.top-stageRect.top+r.height/2]};
-      const path=(pts,color,width,opacity,circles=true)=>{if(!pts.length)return'';const line=pts.length>1?`<polyline points="${pts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="${color}" stroke-width="${width}" stroke-opacity="${opacity}" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>`:'';const dots=circles?pts.map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="${color}" fill-opacity="${opacity}" stroke="#fff" stroke-width="1.5" vector-effect="non-scaling-stroke"/>`).join(''):'';return line+dots;};
-      let markup=''; const code=$('#patientCode').value.trim(),p=readDB().patients[code];
-      if(p?.visits?.length){const choices=[...p.visits].reverse().filter(v=>v.id!==loadedVisitId).slice(0,4);choices.forEach((v,i)=>{if(!selectedCompareIds.has(v.id))return;const der=v.derived||derived(v.data),pts=[];$$('.track[data-metric-key]',stage).forEach(track=>{const m=metrics.find(x=>x.key===track.dataset.metricKey),val=m?valueFor(m,v.data,der):null;if(val===null||m.classify(val,v.data)==='neutral')return;pts.push(pointFor(track,profilePosition(m,val,v.data)));});markup+=path(pts,comparisonColors[i%comparisonColors.length],1.7,.55);});}
       const currentPts=[];$$('[data-current-marker]',stage).forEach(marker=>{if(marker.dataset.profileStatus==='neutral')return;const track=marker.parentElement;currentPts.push(pointFor(track,parseFloat(marker.style.left)));});
-      markup+=path(currentPts,'#17212b',2.8,.95,false); svg.innerHTML=markup;
+      svg.innerHTML=currentPts.length>1?`<polyline points="${currentPts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="#17212b" stroke-width="2.8" stroke-opacity=".95" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>`:'';
     }
+
+    function canvasRoundRect(ctx,x,y,w,h,r){
+      const q=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+q,y);ctx.arcTo(x+w,y,x+w,y+h,q);ctx.arcTo(x+w,y+h,x,y+h,q);ctx.arcTo(x,y+h,x,y,q);ctx.arcTo(x,y,x+w,y,q);ctx.closePath();
+    }
+    function canvasFitText(ctx,text,maxWidth){
+      const s=String(text??'');if(ctx.measureText(s).width<=maxWidth)return s;let out=s;while(out.length>1&&ctx.measureText(out+'…').width>maxWidth)out=out.slice(0,-1);return out+'…';
+    }
+    function canvasWrapText(ctx,text,maxWidth){
+      const words=String(text??'').split(/\s+/),lines=[];let line='';words.forEach(word=>{const test=line?line+' '+word:word;if(line&&ctx.measureText(test).width>maxWidth){lines.push(line);line=word}else line=test});if(line)lines.push(line);return lines;
+    }
+    function buildMapCanvas(d=collect()){
+      const der=derived(d),grouped={};let indicatorCount=0;metrics.forEach(m=>{const v=valueFor(m,d,der);if(v===null)return;(grouped[m.group]??=[]).push({m,v});indicatorCount++});
+      const defs=[['smoking','Tabaquismo actual','exposure'],['vaping','Vapeo actual','exposure'],['formerSmoking','Exfumador','exposure'],['highAlcohol','Consumo elevado de alcohol','exposure'],['diabetes','Diabetes conocida','condition'],['hypertension','Hipertensión conocida','condition'],['ckd','ERC conocida','condition'],['masld','MASLD conocida','condition'],['ascvd','ASCVD establecida','condition'],['heartFailure','Insuficiencia cardíaca','condition'],['osa','Apnea obstructiva del sueño','condition'],['familyHistory','Historia familiar prematura','history']];
+      const flags=defs.filter(([k])=>d[k]).map(([,label,type])=>({label,type}));conditionList(d.otherConditions).forEach(label=>flags.push({label,type:'condition'}));const clinicalNotes=String(d.notes||'').trim();if(!indicatorCount&&!flags.length&&!clinicalNotes)throw new Error('No hay indicadores para exportar.');
+      const W=1200,M=58,rowH=110,groupHeadH=54,layout=[];let cursor=148;Object.entries(grouped).forEach(([name,items])=>{layout.push({type:'group',name,count:items.length,y:cursor});cursor+=groupHeadH;items.forEach(item=>{layout.push({type:'metric',...item,y:cursor});cursor+=rowH});cursor+=12});
+      if(flags.length){layout.push({type:'flags',y:cursor});cursor+=62+Math.ceil(flags.length/3)*54+18}if(clinicalNotes){layout.push({type:'notes',y:cursor});cursor+=120}const profileNote='La línea conecta posiciones normalizadas de indicadores distintos para mostrar la forma del perfil; no implica equivalencia, causalidad ni una puntuación global. Los marcadores contextuales sin umbral validado no se incorporan a la línea.';
+      const H=Math.ceil(cursor+150),scale=1.5,canvas=document.createElement('canvas');canvas.width=Math.ceil(W*scale);canvas.height=Math.ceil(H*scale);const ctx=canvas.getContext('2d');ctx.scale(scale,scale);ctx.fillStyle='#f3f7f8';ctx.fillRect(0,0,W,H);canvasRoundRect(ctx,24,24,W-48,H-48,28);ctx.fillStyle='#fff';ctx.fill();ctx.strokeStyle='#dbe4ea';ctx.lineWidth=2;ctx.stroke();
+      const brand=ctx.createLinearGradient(M,48,M+68,116);brand.addColorStop(0,'#0c6b63');brand.addColorStop(1,'#13a28f');canvasRoundRect(ctx,M,48,68,68,20);ctx.fillStyle=brand;ctx.fill();ctx.fillStyle='#fff';ctx.font='bold 26px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.textAlign='center';ctx.fillText('CRM',M+34,91);ctx.textAlign='left';ctx.fillStyle='#17212b';ctx.font='bold 31px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.fillText('Mapa Integral de Salud Cardiorrenal-Metabólica',M+90,74);ctx.fillStyle='#617080';ctx.font='normal 17px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.fillText(`Código seudónimo: ${String(d.patientCode||'').trim()||'sin código'} · Fecha de consulta: ${formatDate(d.visitDate)}`,M+90,105);
+      const trackX=470,trackW=440,valueX=W-M-18,currentMarkers=[],currentLine=[];
+      layout.forEach(block=>{
+        if(block.type==='group'){ctx.fillStyle='#17212b';ctx.font='bold 22px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.textAlign='left';ctx.fillText(block.name,M+18,block.y+34);ctx.fillStyle='#617080';ctx.font='normal 15px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.textAlign='right';ctx.fillText(`${block.count} indicador${block.count===1?'':'es'}`,valueX,block.y+34);return}
+        if(block.type==='flags'){ctx.fillStyle='#17212b';ctx.font='bold 22px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.textAlign='left';ctx.fillText('Exposiciones y enfermedades o condiciones conocidas',M+18,block.y+34);ctx.fillStyle='#617080';ctx.font='normal 15px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.textAlign='right';ctx.fillText('Sin puntuación',valueX,block.y+34);const fills={condition:'#e8f2ff',exposure:'#fff0e3',history:'#f0ebff'},inks={condition:'#315f86',exposure:'#a35417',history:'#73569e'},colW=(W-M*2-54)/3;flags.forEach((flag,i)=>{const col=i%3,row=Math.floor(i/3),x=M+18+col*(colW+9),y=block.y+54+row*54;canvasRoundRect(ctx,x,y,colW,40,20);ctx.fillStyle=fills[flag.type];ctx.fill();ctx.strokeStyle=inks[flag.type];ctx.lineWidth=2;ctx.stroke();ctx.fillStyle=inks[flag.type];ctx.font='bold 15px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.textAlign='center';ctx.fillText(canvasFitText(ctx,flag.label,colW-20),x+colW/2,y+26)});return}
+        if(block.type==='notes'){canvasRoundRect(ctx,M+18,block.y+8,W-M*2-36,94,14);ctx.fillStyle='#f8fafb';ctx.fill();ctx.strokeStyle='#dbe4ea';ctx.stroke();ctx.fillStyle='#17212b';ctx.font='bold 17px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.textAlign='left';ctx.fillText('Tratamientos y observaciones',M+36,block.y+35);ctx.fillStyle='#617080';ctx.font='normal 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';canvasWrapText(ctx,clinicalNotes,W-M*2-72).slice(0,3).forEach((line,i)=>ctx.fillText(line,M+36,block.y+60+i*19));return}
+        const {m,v}=block,cy=block.y+rowH/2,st=m.classify(v,d),pos=profilePosition(m,v,d),unit=unitFor(m,d),valueText=`${nf.format(v)}${unit?' '+unit:''}`;ctx.textAlign='left';ctx.fillStyle='#17212b';ctx.font='bold 18px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.fillText(canvasFitText(ctx,m.label,370),M+18,cy-18);ctx.fillStyle='#617080';ctx.font='normal 12px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';const detail=`(${rangeFor(m,d)})${m.note?' · '+m.note:''}`;canvasWrapText(ctx,detail,370).slice(0,3).forEach((line,i)=>ctx.fillText(line,M+18,cy+2+i*16));ctx.textAlign='right';ctx.fillStyle='#17212b';ctx.font='bold 18px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';if(ctx.measureText(valueText).width>210)ctx.font='bold 15px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.fillText(valueText,valueX,cy+6);
+        const gradient=ctx.createLinearGradient(trackX,0,trackX+trackW,0);if(st==='neutral'){gradient.addColorStop(0,'#cbd4dc');gradient.addColorStop(.5,'#98a5b1');gradient.addColorStop(1,'#cbd4dc')}else{gradient.addColorStop(0,'#2f9e44');gradient.addColorStop(.35,'#a8bf32');gradient.addColorStop(.48,'#e2b32c');gradient.addColorStop(.70,'#e57c2f');gradient.addColorStop(1,'#d83c3c')}canvasRoundRect(ctx,trackX,cy-9,trackW,18,9);ctx.fillStyle=gradient;ctx.fill();ctx.strokeStyle='rgba(0,0,0,.10)';ctx.lineWidth=1;ctx.stroke();const point={x:trackX+trackW*pos/100,y:cy};currentMarkers.push(point);if(st!=='neutral')currentLine.push(point);ctx.strokeStyle='#e7edef';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(M+18,block.y+rowH-1);ctx.lineTo(valueX,block.y+rowH-1);ctx.stroke();
+      });
+      if(currentLine.length>1){ctx.strokeStyle='#17212b';ctx.globalAlpha=.95;ctx.lineWidth=6;ctx.lineJoin='round';ctx.lineCap='round';ctx.beginPath();currentLine.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.stroke();ctx.globalAlpha=1}currentMarkers.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,13,0,Math.PI*2);ctx.fillStyle='#17212b';ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=5;ctx.stroke()});ctx.fillStyle='#617080';ctx.font='normal 15px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.textAlign='left';const noteY=cursor+24;canvasWrapText(ctx,profileNote,W-M*2-36).slice(0,4).forEach((line,i)=>ctx.fillText(line,M+18,noteY+i*23));ctx.fillStyle='#8a98a8';ctx.font='normal 13px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.fillText('Documento visual generado localmente. No sustituye la interpretación clínica ni constituye un expediente electrónico.',M+18,H-54);return canvas;
+    }
+    function concatBytes(parts){const total=parts.reduce((n,p)=>n+p.length,0),out=new Uint8Array(total);let offset=0;parts.forEach(p=>{out.set(p,offset);offset+=p.length});return out;}
+    function canvasesPdfBlob(canvases){
+      const encoder=new TextEncoder(),bytes=s=>encoder.encode(s),objects=[],kids=[];objects[1]=bytes('<< /Type /Catalog /Pages 2 0 R >>');canvases.forEach((canvas,i)=>{const pageId=3+i*3,contentId=pageId+1,imageId=pageId+2,pageW=595.28,pageH=pageW*canvas.height/canvas.width,data=canvas.toDataURL('image/jpeg',.94).split(',')[1],binary=atob(data),jpeg=new Uint8Array(binary.length);for(let j=0;j<binary.length;j++)jpeg[j]=binary.charCodeAt(j);const imageName=`Im${i}`,content=`q\n${pageW.toFixed(2)} 0 0 ${pageH.toFixed(2)} 0 0 cm\n/${imageName} Do\nQ`;kids.push(`${pageId} 0 R`);objects[pageId]=bytes(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${pageW.toFixed(2)} ${pageH.toFixed(2)}] /Resources << /ProcSet [/PDF /ImageC] /XObject << /${imageName} ${imageId} 0 R >> >> /Contents ${contentId} 0 R >>`);objects[contentId]=bytes(`<< /Length ${bytes(content).length} >>\nstream\n${content}\nendstream`);objects[imageId]=concatBytes([bytes(`<< /Type /XObject /Subtype /Image /Width ${canvas.width} /Height ${canvas.height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpeg.length} >>\nstream\n`),jpeg,bytes('\nendstream')])});objects[2]=bytes(`<< /Type /Pages /Kids [${kids.join(' ')}] /Count ${canvases.length} >>`);const maxId=2+canvases.length*3,chunks=[bytes('%PDF-1.4\n%âãÏÓ\n')],offsets=[0];let offset=chunks[0].length;for(let i=1;i<=maxId;i++){offsets[i]=offset;const chunk=concatBytes([bytes(`${i} 0 obj\n`),objects[i],bytes('\nendobj\n')]);chunks.push(chunk);offset+=chunk.length}const xrefOffset=offset;let xref=`xref\n0 ${maxId+1}\n0000000000 65535 f \n`;for(let i=1;i<=maxId;i++)xref+=String(offsets[i]).padStart(10,'0')+' 00000 n \n';xref+=`trailer\n<< /Size ${maxId+1} /Root 1 0 R >>\nstartxref\n${xrefOffset}\n%%EOF`;chunks.push(bytes(xref));return new Blob([concatBytes(chunks)],{type:'application/pdf'});
+    }
+    async function deliverPdf(blob,name,title){const file=new File([blob],name,{type:'application/pdf'});if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],title});toast('PDF preparado para guardar o compartir.')}else{const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);toast('PDF descargado.') }}
+    function mapPdfSources(){const d=collect(),p=currentPatient(),sources=[{id:'current',label:`Consulta abierta · ${formatDate(d.visitDate)}`,data:d,current:true}];[...(p?.visits||[])].reverse().forEach(v=>{if(v.id!==loadedVisitId)sources.push({id:v.id,label:`Consulta guardada · ${formatDate(v.data.visitDate)}`,data:v.data})});return sources}
+    function openMapPdfModal(){const sources=mapPdfSources(),box=$('#mapPdfChoices');box.innerHTML=sources.map(s=>`<label class="pdf-choice"><input type="checkbox" data-map-pdf-id="${esc(s.id)}" ${s.current?'checked':''}><span><strong>${esc(s.label)}</strong><small>${s.current?'Datos actualmente abiertos':'Mapa independiente de esta visita'}</small></span></label>`).join('');$('#mapPdfModal').classList.add('open')}
+    async function exportMapPdf(){const button=$('#generateMapPdfBtn'),original=button.textContent,sources=mapPdfSources(),ids=new Set($$('[data-map-pdf-id]:checked',$('#mapPdfChoices')).map(x=>x.dataset.mapPdfId)),selected=sources.filter(x=>ids.has(x.id));if(!selected.length){toast('Seleccione al menos una consulta.');return}button.disabled=true;button.textContent='Preparando…';try{const canvases=selected.map(s=>buildMapCanvas(s.data)),blob=canvasesPdfBlob(canvases),d=collect(),safe=(d.patientCode.trim()||'sin-codigo').replace(/[^a-z0-9_-]+/gi,'-');await deliverPdf(blob,`mapas-CRM-${safe}-${today()}.pdf`,'Mapas de Salud Cardiorrenal-Metabólica');$('#mapPdfModal').classList.remove('open')}catch(error){if(error?.name!=='AbortError'){console.error(error);toast(error?.message||'No fue posible generar el PDF.')}}finally{button.disabled=false;button.textContent=original}}
 
     function renderAlerts(d,der){
       const alerts=[];
@@ -566,41 +620,42 @@
       const same=db.patients[code].visits.findIndex(v=>v.data.visitDate===d.visitDate);
       if(same>=0){ if(!confirm('Ya existe una visita en esta fecha. ¿Desea reemplazarla?'))return; db.patients[code].visits[same]=visit; }
       else db.patients[code].visits.push(visit);
-      db.patients[code].visits.sort((a,b)=>a.data.visitDate.localeCompare(b.data.visitDate)); writeDB(db); loadedVisitId=visit.id;setPatientCode(code,true);initializeComparisons(code);renderHistory();renderPatientHome();toast('Visita guardada localmente.');
+      db.patients[code].visits.sort((a,b)=>a.data.visitDate.localeCompare(b.data.visitDate)); writeDB(db); loadedVisitId=visit.id;setPatientCode(code,true);renderHistory();renderPatientHome();toast('Visita guardada localmente.');
     }
     function currentPatient(){ const code=$('#patientCode').value.trim(); return readDB().patients[code]||null; }
-    function loadVisit(id){ const p=currentPatient(),code=$('#patientCode').value.trim();const v=p?.visits.find(x=>x.id===id);if(v){loadedVisitId=v.id;fill(v.data);setPatientCode(code,true);initializeComparisons(code);renderHistory();window.scrollTo({top:0,behavior:'smooth'});toast('Visita cargada.');} }
+    function loadVisit(id){ const p=currentPatient(),code=$('#patientCode').value.trim();const v=p?.visits.find(x=>x.id===id);if(v){loadedVisitId=v.id;form.reset();fill({...blankDefaults(),...v.data});setPatientCode(code,true);renderHistory();window.scrollTo({top:0,behavior:'smooth'});toast('Visita cargada.');} }
     function deleteVisit(id){
       const code=$('#patientCode').value.trim(),db=readDB(),p=db.patients[code];if(!p)return;
       if(!confirm('¿Eliminar esta visita del navegador? Esta acción no se puede deshacer.'))return;
-      p.visits=p.visits.filter(v=>v.id!==id);const patientEmpty=!p.visits.length;if(patientEmpty)delete db.patients[code];writeDB(db);if(loadedVisitId===id)loadedVisitId=null;initializeComparisons(code);renderHistory();renderPatientHome();if(patientEmpty)showHome();toast('Visita eliminada.');
+      p.visits=p.visits.filter(v=>v.id!==id);const patientEmpty=!p.visits.length;if(patientEmpty)delete db.patients[code];writeDB(db);if(loadedVisitId===id)loadedVisitId=null;renderHistory();renderPatientHome();if(patientEmpty)showHome();toast('Visita eliminada.');
     }
     function clearPatient(){
       const code=$('#patientCode').value.trim(),db=readDB();if(!code||!db.patients[code]){toast('No hay historial para este código.');return;}
-      if(!confirm(`¿Eliminar todas las visitas de ${code}? Esta acción no se puede deshacer.`))return;delete db.patients[code];writeDB(db);loadedVisitId=null;selectedCompareIds.clear();renderPatientHome();showHome();toast('Historial del paciente eliminado.');
+      if(!confirm(`¿Eliminar todas las visitas de ${code}? Esta acción no se puede deshacer.`))return;delete db.patients[code];writeDB(db);loadedVisitId=null;renderPatientHome();showHome();toast('Historial del paciente eliminado.');
     }
 
-    const timelineMetricKeys=['weight','bmi','waist','whtr','vat','sbp','dbp','restingHR','steps','aerobicMinutes','strengthSessions','sleepHours','glucose','hba1c','ldl','nonHdl','apob','tg','egfrMap','uacr','alt','ggt','fib4','hscrp'];
+    const timelineMetricKeys=metrics.map(m=>m.key);
+    const trendColors={good:'#2f9e44',watch:'#b38a00',high:'#e57c2f',danger:'#d83c3c',neutral:'#7c8996'};
+    function trendPoints(p,m){return p?.visits?.map(v=>{const der=derived(v.data),value=valueFor(m,v.data,der);return{v,value,date:new Date((v.data.visitDate||today())+'T12:00:00').getTime()}}).filter(x=>x.value!==null).sort((a,b)=>a.date-b.date)||[]}
+    function trendAvailable(p){return p?.visits?.length?metrics.filter(m=>trendPoints(p,m).length>=2):[]}
     function renderTrend(p){
-      const select=$('#trendMetricSelect'),chart=$('#trendChart');
-      const available=p?.visits?.length?timelineMetricKeys.map(k=>metrics.find(m=>m.key===k)).filter(Boolean).filter(m=>p.visits.filter(v=>valueFor(m,v.data,v.derived||derived(v.data))!==null).length>=2):[];
-      if(!available.length){select.innerHTML='<option>Sin indicadores comparables</option>';select.disabled=true;chart.innerHTML='<div class="empty"><strong>Sin tendencia disponible</strong>Se necesitan al menos dos visitas con el mismo indicador.</div>';return;}
-      const prior=select.value;select.disabled=false;select.innerHTML=available.map(m=>`<option value="${m.key}">${m.label}</option>`).join('');if(available.some(m=>m.key===prior))select.value=prior;
-      const m=available.find(x=>x.key===select.value)||available[0],points=p.visits.map(v=>({v,der:v.derived||derived(v.data),date:new Date(v.data.visitDate+'T12:00:00').getTime()})).map(x=>({...x,value:valueFor(m,x.v.data,x.der)})).filter(x=>x.value!==null);
-      const W=Math.max(320,chart.clientWidth||620),H=270,L=52,R=18,T=24,B=42,dates=points.map(x=>x.date),vals=points.map(x=>x.value),minDate=Math.min(...dates),maxDate=Math.max(...dates),rawMin=Math.min(...vals),rawMax=Math.max(...vals),pad=(rawMax-rawMin||Math.max(Math.abs(rawMax)*.1,1))*.16,yMin=rawMin-pad,yMax=rawMax+pad;
-      const xScale=x=>L+(maxDate===minDate ? .5 : (x-minDate)/(maxDate-minDate))*(W-L-R),yScale=y=>T+(yMax-y)/(yMax-yMin)*(H-T-B),statusColor={good:'#2f9e44',watch:'#b38a00',high:'#e57c2f',danger:'#d83c3c',neutral:'#7c8996'};
-      const yTicks=[0,.25,.5,.75,1].map(t=>yMin+t*(yMax-yMin)),tickIdx=points.length<=4?points.map((_,i)=>i):[0,Math.round((points.length-1)/3),Math.round((points.length-1)*2/3),points.length-1].filter((x,i,a)=>a.indexOf(x)===i),unit=unitFor(m,points.at(-1).v.data);
-      chart.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Tendencia de ${esc(m.label)}"><rect class="trend-frame" x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}" rx="8"/>${yTicks.map(t=>`<line class="trend-grid" x1="${L}" x2="${W-R}" y1="${yScale(t)}" y2="${yScale(t)}"/><text class="trend-axis" x="${L-7}" y="${yScale(t)+3}" text-anchor="end">${nf.format(t)}</text>`).join('')}<polyline class="trend-line" points="${points.map(p=>`${xScale(p.date)},${yScale(p.value)}`).join(' ')}"/>${points.map(p=>{const st=m.classify(p.value,p.v.data);return `<circle class="trend-point" cx="${xScale(p.date)}" cy="${yScale(p.value)}" r="5" fill="${statusColor[st]}"/><text class="trend-value" x="${xScale(p.date)}" y="${yScale(p.value)-9}" text-anchor="middle">${nf.format(p.value)}</text>`}).join('')}${tickIdx.map(i=>`<text class="trend-axis" x="${xScale(points[i].date)}" y="${H-17}" text-anchor="${i===0?'start':i===points.length-1?'end':'middle'}">${new Date(points[i].date).toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'2-digit'})}</text>`).join('')}<text class="trend-axis" x="${L}" y="14">${esc(m.label)}${unit?' · '+esc(unit):''}</text></svg>`;
+      const select=$('#trendMetricSelect'),chart=$('#trendChart'),available=trendAvailable(p);$('#trendPdfBtn').disabled=!available.length;
+      if(!available.length){select.innerHTML='<option>Sin indicadores comparables</option>';select.disabled=true;chart.innerHTML='<div class="empty"><strong>Sin tendencia disponible</strong>Se necesitan al menos dos visitas con el mismo indicador.</div>';return}
+      const prior=select.value;select.disabled=false;select.innerHTML=available.map(m=>`<option value="${m.key}">${m.label}</option>`).join('');if(available.some(m=>m.key===prior))select.value=prior;const m=available.find(x=>x.key===select.value)||available[0],points=trendPoints(p,m),W=Math.max(320,chart.clientWidth||620),H=270,L=52,R=18,T=24,B=42,dates=points.map(x=>x.date),vals=points.map(x=>x.value),minDate=Math.min(...dates),maxDate=Math.max(...dates),rawMin=Math.min(...vals),rawMax=Math.max(...vals),pad=(rawMax-rawMin||Math.max(Math.abs(rawMax)*.1,1))*.16,yMin=rawMin-pad,yMax=rawMax+pad,xScale=x=>L+(maxDate===minDate ? .5 : (x-minDate)/(maxDate-minDate))*(W-L-R),yScale=y=>T+(yMax-y)/(yMax-yMin)*(H-T-B),yTicks=[0,.25,.5,.75,1].map(t=>yMin+t*(yMax-yMin)),tickIdx=points.length<=4?points.map((_,i)=>i):[0,Math.round((points.length-1)/3),Math.round((points.length-1)*2/3),points.length-1].filter((x,i,a)=>a.indexOf(x)===i),unit=unitFor(m,points.at(-1).v.data);
+      chart.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Tendencia de ${esc(m.label)}"><rect class="trend-frame" x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}" rx="8"/>${yTicks.map(t=>`<line class="trend-grid" x1="${L}" x2="${W-R}" y1="${yScale(t)}" y2="${yScale(t)}"/><text class="trend-axis" x="${L-7}" y="${yScale(t)+3}" text-anchor="end">${nf.format(t)}</text>`).join('')}<polyline class="trend-line" points="${points.map(p=>`${xScale(p.date)},${yScale(p.value)}`).join(' ')}"/>${points.map(p=>`<circle class="trend-point" cx="${xScale(p.date)}" cy="${yScale(p.value)}" r="5" fill="${trendColors[m.classify(p.value,p.v.data)]}"/><text class="trend-value" x="${xScale(p.date)}" y="${yScale(p.value)-9}" text-anchor="middle">${nf.format(p.value)}</text>`).join('')}${tickIdx.map(i=>`<text class="trend-axis" x="${xScale(points[i].date)}" y="${H-17}" text-anchor="${i===0?'start':i===points.length-1?'end':'middle'}">${new Date(points[i].date).toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'2-digit'})}</text>`).join('')}<text class="trend-axis" x="${L}" y="14">${esc(m.label)}${unit?' · '+esc(unit):''}</text></svg>`;
     }
+    function drawTrendPanel(ctx,x,y,w,h,m,points){canvasRoundRect(ctx,x,y,w,h,18);ctx.fillStyle='#fff';ctx.fill();ctx.strokeStyle='#dbe4ea';ctx.lineWidth=2;ctx.stroke();ctx.fillStyle='#17212b';ctx.font='bold 20px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.textAlign='left';ctx.fillText(canvasFitText(ctx,m.label,w-42),x+20,y+31);const unit=unitFor(m,points.at(-1).v.data);ctx.fillStyle='#617080';ctx.font='normal 12px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.fillText(canvasFitText(ctx,`(${rangeFor(m,points.at(-1).v.data)})${unit?' · '+unit:''}`,w-42),x+20,y+51);const L=x+62,R=x+w-22,T=y+76,B=y+h-48,dates=points.map(p=>p.date),vals=points.map(p=>p.value),minDate=Math.min(...dates),maxDate=Math.max(...dates),rawMin=Math.min(...vals),rawMax=Math.max(...vals),pad=(rawMax-rawMin||Math.max(Math.abs(rawMax)*.1,1))*.16,yMin=rawMin-pad,yMax=rawMax+pad,xScale=v=>L+(maxDate===minDate ? .5 : (v-minDate)/(maxDate-minDate))*(R-L),yScale=v=>T+(yMax-v)/(yMax-yMin)*(B-T);ctx.font='normal 11px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';[0,.25,.5,.75,1].forEach(t=>{const val=yMin+t*(yMax-yMin),py=yScale(val);ctx.strokeStyle='#e7edef';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(L,py);ctx.lineTo(R,py);ctx.stroke();ctx.fillStyle='#6a7885';ctx.textAlign='right';ctx.fillText(nf.format(val),L-7,py+4)});ctx.strokeStyle='#17212b';ctx.lineWidth=3;ctx.lineJoin='round';ctx.beginPath();points.forEach((p,i)=>i?ctx.lineTo(xScale(p.date),yScale(p.value)):ctx.moveTo(xScale(p.date),yScale(p.value)));ctx.stroke();points.forEach(p=>{ctx.beginPath();ctx.arc(xScale(p.date),yScale(p.value),6,0,Math.PI*2);ctx.fillStyle=trendColors[m.classify(p.value,p.v.data)];ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.stroke()});ctx.fillStyle='#6a7885';ctx.font='normal 11px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.textAlign='left';ctx.fillText(formatDate(points[0].v.data.visitDate),L,B+26);ctx.textAlign='right';ctx.fillText(formatDate(points.at(-1).v.data.visitDate),R,B+26)}
+    function buildTrendCanvases(p){const available=trendAvailable(p),pages=[];if(!available.length)throw new Error('Se necesitan al menos dos visitas comparables.');for(let start=0;start<available.length;start+=6){const W=1200,H=1697,scale=1.25,canvas=document.createElement('canvas');canvas.width=W*scale;canvas.height=H*scale;const ctx=canvas.getContext('2d');ctx.scale(scale,scale);ctx.fillStyle='#f3f7f8';ctx.fillRect(0,0,W,H);ctx.fillStyle='#17212b';ctx.font='bold 30px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.textAlign='left';ctx.fillText('Tendencias longitudinales cardiorrenales-metabólicas',54,56);ctx.fillStyle='#617080';ctx.font='normal 16px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.fillText(`Código seudónimo: ${String(collect().patientCode||'').trim()||'sin código'} · Página ${Math.floor(start/6)+1} de ${Math.ceil(available.length/6)}`,54,84);const gap=24,panelW=(W-108-gap)/2,panelH=(H-134-64-gap*2)/3;available.slice(start,start+6).forEach((m,i)=>drawTrendPanel(ctx,54+(i%2)*(panelW+gap),112+Math.floor(i/2)*(panelH+gap),panelW,panelH,m,trendPoints(p,m)));ctx.fillStyle='#8a98a8';ctx.font='normal 13px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif';ctx.fillText('Seis gráficas por página. Valores reales guardados en este navegador; interpretación clínica individual.',54,H-30);pages.push(canvas)}return pages}
+    async function exportTrendPdf(){const button=$('#trendPdfBtn'),original=button.innerHTML,p=currentPatient();button.disabled=true;button.textContent='Preparando…';try{const canvases=buildTrendCanvases(p),blob=canvasesPdfBlob(canvases),safe=($('#patientCode').value.trim()||'sin-codigo').replace(/[^a-z0-9_-]+/gi,'-');await deliverPdf(blob,`tendencias-CRM-${safe}-${today()}.pdf`,'Tendencias Cardiorrenales-Metabólicas')}catch(error){if(error?.name!=='AbortError'){console.error(error);toast(error?.message||'No fue posible generar el PDF de tendencias.')}}finally{button.disabled=false;button.innerHTML=original}}
     function renderHistory(){
       const code=$('#patientCode').value.trim(),p=currentPatient(),list=$('#historyList'),container=$('#timelineContainer');
-      renderComparisonControls();renderTrend(p);
+      renderTrend(p);
       if(!code||!p?.visits?.length){list.innerHTML='<div class="empty"><strong>Sin historial</strong>Guarde una visita para este código.</div>';container.innerHTML='<div class="empty"><strong>Sin visitas guardadas</strong>La evolución aparecerá aquí.</div>';return;}
       list.innerHTML=`<div class="history-list">${[...p.visits].reverse().map(v=>{const vd=v.derived||derived(v.data);return `<div class="visit"><div><b>${formatDate(v.data.visitDate)}${v.id===loadedVisitId?' · abierta':''}</b><small>${finite(vd.bmi)?`IMC ${nf.format(vd.bmi)} · `:''}${finite(v.data.ldl)?`LDL ${nf.format(v.data.ldl)} · `:''}${finite(v.data.apob)?`ApoB ${nf.format(v.data.apob)}`:''}</small></div><div><button class="btn small" data-load="${v.id}" type="button">Abrir</button> <button class="btn small danger" data-delete="${v.id}" type="button" aria-label="Eliminar visita">×</button></div></div>`}).join('')}</div>`;
       $$('[data-load]',list).forEach(b=>b.onclick=()=>loadVisit(b.dataset.load));$$('[data-delete]',list).forEach(b=>b.onclick=()=>deleteVisit(b.dataset.delete));
-      const visits=p.visits.slice(-8); const available=timelineMetricKeys.map(k=>metrics.find(m=>m.key===k)).filter(Boolean).filter(m=>visits.some(v=>valueFor(m,v.data,v.derived)!==null));
+      const visits=p.visits.slice(-8); const available=timelineMetricKeys.map(k=>metrics.find(m=>m.key===k)).filter(Boolean).filter(m=>visits.some(v=>valueFor(m,v.data,derived(v.data))!==null));
       if(!available.length){container.innerHTML='<div class="empty"><strong>Sin indicadores comparables</strong>Las visitas guardadas no tienen variables del mapa.</div>';return;}
-      container.innerHTML=`<div class="timeline-wrap"><table class="timeline"><thead><tr><th>Indicador</th>${visits.map(v=>`<th>${formatDate(v.data.visitDate)}</th>`).join('')}</tr></thead><tbody>${available.map(m=>`<tr><td>${m.label}</td>${visits.map(v=>{const val=valueFor(m,v.data,v.derived);if(val===null)return'<td>—</td>';const st=m.classify(val,v.data);return`<td class="cell-${st}" title="${statusText[st]}">${nf.format(val)}${unitFor(m,v.data)?' '+unitFor(m,v.data):''}</td>`;}).join('')}</tr>`).join('')}</tbody></table></div><div class="note">Se muestran como máximo las ocho visitas más recientes. Los colores utilizan la meta y el contexto guardados en cada visita.</div>`;
+      container.innerHTML=`<div class="timeline-wrap"><table class="timeline"><thead><tr><th>Indicador</th>${visits.map(v=>`<th>${formatDate(v.data.visitDate)}</th>`).join('')}</tr></thead><tbody>${available.map(m=>`<tr><td>${m.label}</td>${visits.map(v=>{const val=valueFor(m,v.data,derived(v.data));if(val===null)return'<td>—</td>';const st=m.classify(val,v.data);return`<td class="cell-${st}">${nf.format(val)}${unitFor(m,v.data)?' '+unitFor(m,v.data):''}</td>`;}).join('')}</tr>`).join('')}</tbody></table></div><div class="note">Se muestran como máximo las ocho visitas más recientes. Los colores utilizan la meta y el contexto guardados en cada visita.</div>`;
       requestAnimationFrame(drawProfileLines);
     }
 
@@ -615,20 +670,22 @@
       try{const payload=JSON.parse(await file.text());if(!payload||typeof payload.patients!=='object')throw new Error();const db=readDB();Object.entries(payload.patients).forEach(([code,p])=>{if(!p||!Array.isArray(p.visits))return;db.patients[code]??={createdAt:p.createdAt||new Date().toISOString(),visits:[]};const byId=new Map(db.patients[code].visits.map(v=>[v.id,v]));p.visits.forEach(v=>{if(v?.id&&v?.data)byId.set(v.id,v)});db.patients[code].visits=[...byId.values()].sort((a,b)=>(a.data.visitDate||'').localeCompare(b.data.visitDate||''));});writeDB(db);renderPatientHome();renderHistory();toast('Datos importados correctamente.');}catch{toast('El archivo no tiene un formato válido.');}
     }
     function applyTargetContext(){
-      const v=$('#targetContext').value,presets={standard:[100,130,90],intensified:[70,100,65],veryHigh:[55,85,55]};if(!presets[v])return;
+      const v=$('#targetContext').value,presets={standard:[100,130,90],intensified:[70,100,70],veryHigh:[55,85,60]};if(!presets[v])return;
       const [l,n,a]=presets[v];$('[data-key="ldlTarget"]').value=l;$('[data-key="nonHdlTarget"]').value=n;$('[data-key="apobTarget"]').value=a;calculate();
     }
     function demo(){
-      form.reset();fill({patientCode:'EJEMPLO-01',visitDate:today(),sex:'male',age:'42',weight:'108',height:'175',waist:'119',thigh:'61',activityFactor:'1.3',energyGoal:'deficit',goalPercent:'20',sbp:'132',dbp:'84',restingHR:'82',sleepHours:'6',steps:'4200',aerobicMinutes:'45',strengthSessions:'1',sittingHours:'10',glucose:'108',hba1c:'5.9',fastingInsulin:'18',tg:'286',tc:'246',hdl:'39',ldl:'154',apob:'132',lpa:'24',lpaUnit:'nmol/L',alt:'62',ast:'39',ggt:'74',platelets:'238',creatinine:'1.02',uacr:'18',urea:'35',uricAcid:'8.1',hscrp:'3.4',ldlTarget:'70',nonHdlTarget:'100',apobTarget:'65',astUln:'35',altUln:'35',ggtUln:'55',targetContext:'custom',vaping:true,masld:true,notes:'Datos demostrativos; no corresponden a un paciente real.'});setPatientCode('EJEMPLO-01',true);loadedVisitId=null;selectedCompareIds.clear();comparisonPatientCode='EJEMPLO-01';showWorkspace();toast('Ejemplo demostrativo cargado; no se ha guardado.');
+      form.reset();fill({patientCode:'EJEMPLO-01',visitDate:today(),sex:'male',age:'42',weight:'108',height:'175',waist:'119',thigh:'61',activityFactor:'1.3',energyGoal:'deficit',goalPercent:'20',sbp:'132',dbp:'84',restingHR:'82',sleepHours:'6',steps:'4200',aerobicMinutes:'45',vigorousMinutes:'15',strengthSessions:'1',sittingHours:'10',glucose:'108',hba1c:'5.9',fastingInsulin:'18',tg:'286',tc:'246',hdl:'39',ldl:'154',apob:'132',lpa:'24',lpaUnit:'nmol/L',alt:'62',ast:'39',ggt:'74',platelets:'238',creatinine:'1.02',uacr:'18',urea:'35',uricAcid:'8.1',hscrp:'3.4',ldlTarget:'70',nonHdlTarget:'100',apobTarget:'70',astUln:'35',altUln:'35',ggtUln:'55',targetContext:'custom',vaping:true,masld:true,otherConditions:['Hipotiroidismo'],notes:'Datos demostrativos; no corresponden a un paciente real.'});setPatientCode('EJEMPLO-01',true);loadedVisitId=null;showWorkspace();toast('Ejemplo demostrativo cargado; no se ha guardado.');
     }
 
     form.addEventListener('input',e=>{if(e.target.id==='patientCode'){$('#workspacePatientCode').textContent=e.target.value.trim()||'Nuevo';renderHistory();}calculate();});
     form.addEventListener('change',e=>{if(e.target.id==='activityFactor'||e.target.id==='energyGoal')syncControls();if(e.target.id==='targetContext')applyTargetContext();calculate();});
     form.addEventListener('submit',saveVisit);
-    $('#refreshBtn').onclick=calculate;$('#newVisitBtn').onclick=newVisit;$('#exportBtn').onclick=()=>exportData(false);$('#clearPatientBtn').onclick=clearPatient;$('#demoBtn').onclick=demo;$('#printBtn').onclick=()=>window.print();
+    $('#refreshBtn').onclick=calculate;$('#mapPdfBtn').onclick=openMapPdfModal;$('#trendPdfBtn').onclick=exportTrendPdf;$('#newVisitBtn').onclick=newVisit;$('#exportBtn').onclick=()=>exportData(false);$('#clearPatientBtn').onclick=clearPatient;$('#demoBtn').onclick=demo;$('#printBtn').onclick=()=>window.print();
     $('#newPatientBtn').onclick=startNewPatient;$('#backHomeBtn').onclick=showHome;$('#homeBackupBtn').onclick=()=>exportData(true);$('#workspaceBackupBtn').onclick=()=>exportData(false);$('#workspaceNewVisitBtn').onclick=newVisit;$('#trendMetricSelect').onchange=()=>renderTrend(currentPatient());
+    $('#addConditionBtn').onclick=addOtherConditions;$('#otherConditionInput').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addOtherConditions()}});
     $('#importFile').onchange=e=>{if(e.target.files[0])importData(e.target.files[0]);e.target.value='';};
     const modal=$('#helpModal');$('#helpBtn').onclick=()=>modal.classList.add('open');$('#closeHelp').onclick=()=>modal.classList.remove('open');modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
+    const mapPdfModal=$('#mapPdfModal');$('#closeMapPdfModal').onclick=()=>mapPdfModal.classList.remove('open');mapPdfModal.addEventListener('click',e=>{if(e.target===mapPdfModal)mapPdfModal.classList.remove('open')});$('#mapPdfSelectAllBtn').onclick=()=>$$('[data-map-pdf-id]',$('#mapPdfChoices')).forEach(x=>x.checked=true);$('#generateMapPdfBtn').onclick=exportMapPdf;document.addEventListener('keydown',e=>{if(e.key==='Escape')mapPdfModal.classList.remove('open')});
     window.addEventListener('resize',()=>{requestAnimationFrame(drawProfileLines);renderTrend(currentPatient());});
     form.reset();fill(blankDefaults());renderPatientHome();showHome();
   })();
