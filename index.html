@@ -25,8 +25,20 @@
     .brand h1{font-size:16px;margin:0;line-height:1.2}.brand p{font-size:12px;color:var(--muted);margin:3px 0 0}
     .top-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
     .app{max-width:1440px;margin:22px auto 60px;padding:0 22px}
+    [hidden]{display:none!important}
     .privacy{background:#eef8f5;border:1px solid #cfe8e0;border-radius:14px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;color:#245850;font-size:13px;margin-bottom:18px}
     .privacy strong{color:#154b44}
+    .home-screen{display:grid;gap:18px}
+    .home-hero{background:linear-gradient(135deg,#ffffff 0%,#edf8f5 100%);border:1px solid #cfe4df;border-radius:22px;box-shadow:var(--shadow);padding:24px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .home-hero h2{font-size:24px;line-height:1.2;margin:0}.home-hero p{color:var(--muted);font-size:13px;margin:7px 0 0;max-width:680px}
+    .home-actions{display:flex;gap:9px;flex-wrap:wrap}
+    .patient-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+    .patient-card{border:1px solid var(--line);border-radius:15px;padding:15px;background:#fff;display:grid;gap:11px;box-shadow:0 6px 18px rgba(26,55,69,.06)}
+    .patient-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.patient-card h3{font-size:16px;margin:0;overflow-wrap:anywhere}.patient-card .visit-count{font-size:10px;font-weight:800;color:var(--brand);background:#e5f5f1;border-radius:999px;padding:5px 8px;white-space:nowrap}
+    .patient-meta{font-size:11px;color:var(--muted);min-height:34px}.patient-meta b{color:#425160}.patient-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .storage-note{font-size:11px;color:var(--muted);margin:0}
+    .workspace-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;padding:10px 12px;background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:0 5px 14px rgba(26,55,69,.05)}
+    .workspace-patient{font-size:12px;color:var(--muted)}.workspace-patient strong{font-size:14px;color:var(--ink);margin-left:4px}.workspace-actions{display:flex;gap:8px;flex-wrap:wrap}
     .layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(430px,.95fr);gap:20px;align-items:start}
     .stack{display:grid;gap:18px}
     .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
@@ -54,11 +66,13 @@
     .empty{padding:32px 18px;text-align:center;color:var(--muted);border:1px dashed #cbd6dd;border-radius:13px;background:#fafcfc}.empty strong{display:block;color:#3d4b58;margin-bottom:5px}
     .domain{margin-bottom:21px}.domain:last-child{margin-bottom:0}.domain-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}.domain-head h3{font-size:13px;margin:0}.domain-head span{font-size:10px;color:var(--muted)}
     .flag-grid{display:flex;flex-wrap:wrap;gap:7px}.flag{border-radius:999px;padding:7px 10px;font-size:10px;font-weight:800;border:1px solid currentColor}.flag.danger{color:#b93232;background:#fdeaea}.flag.high{color:#a35417;background:#fff0e3}.flag.watch{color:#856700;background:#fff7d8}.flag.neutral{color:#586777;background:#eff3f5}
-    .metric{display:grid;grid-template-columns:165px 1fr 92px;gap:11px;align-items:center;padding:8px 0;border-bottom:1px solid #edf1f3}.metric:last-child{border-bottom:0}.metric-name{font-size:12px;font-weight:700}.metric-name small{display:block;color:var(--muted);font-size:10px;font-weight:400}.track{height:12px;border-radius:999px;background:linear-gradient(90deg,var(--good) 0 25%,#9fbf30 38%,var(--watch) 54%,var(--high) 73%,var(--danger) 100%);position:relative;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
-    .track.bidirectional{background:linear-gradient(90deg,var(--danger),var(--watch) 22%,var(--good) 43%,var(--good) 60%,var(--watch) 78%,var(--danger))}
-    .track.reverse{background:linear-gradient(90deg,var(--danger),var(--high) 30%,var(--watch) 56%,var(--good))}
-    .marker{position:absolute;top:50%;width:17px;height:17px;border-radius:50%;background:#17212b;border:3px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.35);transform:translate(-50%,-50%)}
+    .metric{display:grid;grid-template-columns:165px 1fr 92px;gap:11px;align-items:center;padding:8px 0;border-bottom:1px solid #edf1f3}.metric:last-child{border-bottom:0}.metric-name{font-size:12px;font-weight:700}.metric-name small{display:block;color:var(--muted);font-size:10px;font-weight:400}.track{height:12px;border-radius:999px;background:linear-gradient(90deg,var(--good) 0 24%,#a8bf32 35%,var(--watch) 48%,var(--high) 70%,var(--danger) 100%);position:relative;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+    .track.neutral-track{background:linear-gradient(90deg,#cbd4dc,#98a5b1,#cbd4dc)}
+    .marker{position:absolute;z-index:4;top:50%;width:17px;height:17px;border-radius:50%;background:#17212b;border:3px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.35);transform:translate(-50%,-50%)}
     .metric-value{text-align:right;font-size:12px;font-weight:800}.metric-value small{display:block;font-size:9px;font-weight:700}.status-good{color:var(--good)}.status-watch{color:#9c7500}.status-high{color:var(--high)}.status-danger{color:var(--danger)}.status-neutral{color:var(--neutral)}
+    .profile-compare{margin-bottom:15px;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:#f8fafb}.profile-compare-title{font-size:11px;font-weight:800;color:#425160;margin-bottom:8px}.compare-options{display:flex;gap:8px;flex-wrap:wrap}.compare-option{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:#4d5c69;border:1px solid var(--line);border-radius:999px;padding:6px 9px;background:#fff;cursor:pointer}.compare-option input{width:auto;margin:0}.compare-swatch{width:14px;height:3px;border-radius:2px;background:var(--series-color)}
+    .profile-stage{position:relative}.profile-lines{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;overflow:visible}.profile-note{font-size:10px;color:var(--muted);margin:10px 0 0}
+    .trend-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}.trend-controls label{margin:0}.trend-controls select{width:auto;min-width:190px}.trend-chart{min-height:220px}.trend-chart svg{display:block;width:100%;height:auto}.trend-frame{fill:#fbfcfd;stroke:var(--line)}.trend-grid{stroke:#e5ecef;stroke-width:1}.trend-line{fill:none;stroke:#17212b;stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}.trend-point{stroke:#fff;stroke-width:2}.trend-axis{fill:var(--muted);font-size:10px}.trend-value{fill:var(--ink);font-size:10px;font-weight:700}
     .timeline-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}.timeline{border-collapse:separate;border-spacing:0;width:100%;min-width:640px;font-size:11px}.timeline th,.timeline td{padding:8px 9px;border-right:1px solid #e7edef;border-bottom:1px solid #e7edef;text-align:center;white-space:nowrap}.timeline th{position:sticky;top:0;background:#eef3f5;z-index:1;color:#42515f}.timeline th:first-child,.timeline td:first-child{position:sticky;left:0;text-align:left;background:#fff;z-index:2;font-weight:700}.timeline th:first-child{background:#eef3f5;z-index:3}.timeline tr:last-child td{border-bottom:0}.timeline td:last-child,.timeline th:last-child{border-right:0}
     .cell-good{background:#e5f5e9!important;color:#226d32}.cell-watch{background:#fff4ca!important;color:#816400}.cell-high{background:#ffeadb!important;color:#a94c0e}.cell-danger{background:#fde1e1!important;color:#a72d2d}.cell-neutral{background:#f2f4f6!important;color:#6a7681}
     .history-list{display:grid;gap:8px;margin-top:12px}.visit{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:11px;padding:10px 11px}.visit b{font-size:12px}.visit small{display:block;color:var(--muted);font-size:10px;margin-top:2px}
@@ -66,10 +80,10 @@
     .toast{position:fixed;right:20px;bottom:20px;z-index:50;max-width:360px;padding:12px 15px;background:#17212b;color:#fff;border-radius:12px;box-shadow:0 15px 35px rgba(0,0,0,.25);font-size:12px;opacity:0;transform:translateY(12px);pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:none}
     .modal{position:fixed;inset:0;z-index:60;background:rgba(13,28,38,.58);display:none;place-items:center;padding:20px}.modal.open{display:grid}.modal-box{background:#fff;border-radius:18px;max-width:760px;width:100%;max-height:85vh;overflow:auto;box-shadow:0 25px 80px rgba(0,0,0,.3)}.modal-box header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);padding:16px 20px;display:flex;justify-content:space-between;align-items:center}.modal-box header h2{font-size:17px;margin:0}.modal-content{padding:20px;font-size:13px}.modal-content h3{font-size:14px;margin:20px 0 8px}.modal-content h3:first-child{margin-top:0}.modal-content ul{padding-left:20px}
     .print-only{display:none}
-    @media(max-width:1050px){.layout{grid-template-columns:1fr}.right{order:-1}.metric{grid-template-columns:150px 1fr 85px}}
-    @media(max-width:700px){.app{padding:0 12px;margin-top:12px}.topbar-inner{padding:10px 12px}.brand p{display:none}.top-actions .btn span{display:none}.card-body{padding:15px}.card-head{padding:15px}.field,.field.span-2,.field.span-3,.field.span-4{grid-column:span 6}.field.span-6,.field.span-8,.field.span-12{grid-column:span 12}.results{grid-template-columns:repeat(2,1fr)}.metric{grid-template-columns:1fr 80px}.metric .track{grid-column:1/-1;grid-row:2}.metric-value{grid-column:2;grid-row:1}.privacy{font-size:11px}}
-    @media(max-width:430px){.field,.field.span-2,.field.span-3,.field.span-4,.field.span-6{grid-column:span 12}.results{grid-template-columns:1fr 1fr}.result .v{font-size:19px}.top-actions{gap:5px}.btn{padding:8px}.brand-mark{width:36px;height:36px}}
-    @media print{body{background:#fff}.topbar,.privacy,.left,.top-actions,.form-actions,.history-actions,.btn,.note{display:none!important}.app{max-width:none;margin:0;padding:0}.layout{display:block}.card{box-shadow:none;border:0}.card-head{padding:8px 0}.card-body{padding:10px 0}.print-only{display:block}.metric{break-inside:avoid}.timeline-wrap{overflow:visible}.timeline{min-width:0}.timeline th:first-child,.timeline td:first-child{position:static}}
+    @media(max-width:1050px){.layout{grid-template-columns:1fr}.right{order:-1}.metric{grid-template-columns:150px 1fr 85px}.patient-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:700px){.app{padding:0 12px;margin-top:12px}.topbar-inner{padding:10px 12px}.brand p{display:none}.top-actions .btn span{display:none}.home-hero{align-items:flex-start;flex-direction:column;padding:18px}.home-hero h2{font-size:21px}.home-actions{width:100%}.home-actions .btn{flex:1 1 145px}.patient-grid{grid-template-columns:1fr}.workspace-nav{align-items:flex-start;flex-direction:column}.workspace-actions{width:100%}.workspace-actions .btn{flex:1}.card-body{padding:15px}.card-head{padding:15px}.field,.field.span-2,.field.span-3,.field.span-4{grid-column:span 6}.field.span-6,.field.span-8,.field.span-12{grid-column:span 12}.results{grid-template-columns:repeat(2,1fr)}.metric{grid-template-columns:1fr 80px}.metric .track{grid-column:1/-1;grid-row:2}.metric-value{grid-column:2;grid-row:1}.privacy{font-size:11px}.trend-controls{display:grid;grid-template-columns:1fr}.trend-controls select{width:100%}}
+    @media(max-width:430px){.field,.field.span-2,.field.span-3,.field.span-4,.field.span-6{grid-column:span 12}.results{grid-template-columns:1fr 1fr}.result .v{font-size:19px}.top-actions{gap:5px}.btn{padding:8px}.brand-mark{width:36px;height:36px}.patient-actions{grid-template-columns:1fr}}
+    @media print{body{background:#fff}.topbar,.privacy,.left,.top-actions,.form-actions,.history-actions,.btn,.note,.home-screen,.workspace-nav,.profile-compare,.trend-controls{display:none!important}.app{max-width:none;margin:0;padding:0}.layout{display:block}.card{box-shadow:none;border:0}.card-head{padding:8px 0}.card-body{padding:10px 0}.print-only{display:block}.metric{break-inside:avoid}.timeline-wrap{overflow:visible}.timeline{min-width:0}.timeline th:first-child,.timeline td:first-child{position:static}}
   </style>
 </head>
 <body>
@@ -81,7 +95,6 @@
       </div>
       <div class="top-actions">
         <button class="btn" id="helpBtn" type="button">ⓘ <span>Metodología</span></button>
-        <button class="btn" id="demoBtn" type="button">◉ <span>Cargar ejemplo</span></button>
         <button class="btn" id="printBtn" type="button">⎙ <span>Imprimir</span></button>
       </div>
     </div>
@@ -91,7 +104,26 @@
     <div class="privacy"><span>🔒</span><div><strong>Procesamiento local.</strong> Esta página no transmite información. Use únicamente un código seudónimo; no introduzca nombre, fecha de nacimiento, correo, teléfono u otros identificadores directos. GitHub Pages no es un expediente clínico.</div></div>
     <div class="print-only"><h1>Mapa Integral de Salud Cardiorrenal-Metabólica</h1><p id="printMeta"></p></div>
 
-    <div class="layout">
+    <section class="home-screen" id="patientHome">
+      <div class="home-hero">
+        <div><h2>Pacientes guardados</h2><p>Abra un paciente, prepare una nueva consulta o cree un código nuevo. Los datos permanecen únicamente en este navegador.</p></div>
+        <div class="home-actions">
+          <button class="btn primary" id="newPatientBtn" type="button">＋ Nuevo paciente</button>
+          <button class="btn" id="homeBackupBtn" type="button">⇩ Descargar respaldo</button>
+          <label class="btn" for="importFile" style="margin:0">⇧ Importar respaldo</label>
+          <button class="btn" id="demoBtn" type="button">Ver ejemplo demostrativo</button>
+        </div>
+      </div>
+      <div id="patientList" class="patient-grid"></div>
+      <p class="storage-note">Use códigos seudónimos. Si borra los datos del navegador, cambia de dispositivo o utiliza otro navegador, este historial no aparecerá; descargue respaldos periódicos.</p>
+    </section>
+
+    <div id="workspace" hidden>
+      <div class="workspace-nav">
+        <div><button class="btn" id="backHomeBtn" type="button">← Pacientes</button><span class="workspace-patient">Paciente:<strong id="workspacePatientCode">Nuevo</strong></span></div>
+        <div class="workspace-actions"><button class="btn" id="workspaceNewVisitBtn" type="button">＋ Nueva visita</button><button class="btn" id="workspaceBackupBtn" type="button">⇩ Respaldo</button></div>
+      </div>
+      <div class="layout">
       <div class="stack left">
         <form id="clinicalForm" autocomplete="off">
           <section class="card">
@@ -231,13 +263,18 @@
 
       <div class="stack right">
         <section class="card">
-          <div class="card-head"><div><h2>Perfil actual</h2><p>Dominios independientes; no es un puntaje de riesgo</p></div><button class="btn small" id="refreshBtn" type="button">Actualizar</button></div>
-          <div class="card-body" id="profileMap"><div class="empty"><strong>Introduzca datos clínicos</strong>El mapa aparecerá conforme se completen los campos.</div></div>
+          <div class="card-head"><div><h2>Perfil clínico conectado</h2><p>Favorable a la izquierda · mayor atención a la derecha</p></div><button class="btn small" id="refreshBtn" type="button">Actualizar</button></div>
+          <div class="card-body"><div id="profileCompareControls"></div><div id="profileMap"><div class="empty"><strong>Introduzca datos clínicos</strong>El mapa aparecerá conforme se completen los campos.</div></div><p class="profile-note">La línea conecta posiciones normalizadas de indicadores distintos para mostrar la forma del perfil; no implica equivalencia, causalidad ni una puntuación global. Los marcadores contextuales sin umbral validado no se incorporan a la línea.</p></div>
         </section>
 
         <section class="card">
           <div class="card-head"><div><h2>Indicadores derivados</h2><p>Cálculos automáticos disponibles</p></div></div>
           <div class="card-body"><div id="derivedResults" class="results"></div><div id="clinicalAlerts"></div></div>
+        </section>
+
+        <section class="card">
+          <div class="card-head"><div><h2>Tendencia por indicador</h2><p>Valores reales a través del tiempo</p></div></div>
+          <div class="card-body"><div class="trend-controls"><label for="trendMetricSelect">Indicador</label><select id="trendMetricSelect"></select></div><div id="trendChart" class="trend-chart"><div class="empty"><strong>Sin tendencia disponible</strong>Se necesitan al menos dos visitas con el mismo indicador.</div></div></div>
         </section>
 
         <section class="card">
@@ -250,6 +287,7 @@
           <div class="card-body"><div id="historyList"><div class="empty"><strong>Sin historial</strong>Elija o escriba un código de paciente.</div></div></div>
         </section>
       </div>
+      </div>
     </div>
   </main>
 
@@ -259,7 +297,7 @@
       <h3>Propósito</h3><p>Herramienta clínica de organización y seguimiento. No diagnostica, no sustituye juicio clínico y no es una calculadora validada de riesgo cardiovascular.</p>
       <h3>Grasa visceral estimada</h3><p>Modelo de Samouda et al. (Obesity, 2013): usa cintura, muslo proximal, edad y, en mujeres, IMC. El resultado es un área estimada en cm² y posee error individual amplio. La medición directa requiere imagen.</p>
       <h3>Energía</h3><p>El GER se estima con Mifflin–St Jeor y el GET con un multiplicador de actividad. Ambas cifras deben recalibrarse según evolución real. El factor de actividad no equivale sólo al ejercicio programado.</p>
-      <h3>Colores</h3><p>Los colores representan atención clínica según reglas transparentes, metas configurables o categorías habituales. Verde no significa riesgo cero y rojo no establece diagnóstico. Las metas lipídicas deben individualizarse.</p>
+      <h3>Colores y perfil conectado</h3><p>Los colores representan atención clínica según reglas transparentes, metas configurables o categorías habituales. La línea conecta la posición normalizada de indicadores diferentes para mostrar la forma del perfil, pero no los convierte en una escala común, no expresa causalidad y no constituye una puntuación global. Los marcadores contextuales sin umbral validado quedan fuera de la línea. Verde no significa riesgo cero y rojo no establece diagnóstico. Las metas lipídicas deben individualizarse.</p>
       <h3>Marcadores con interpretación especial</h3><ul><li>HDL-C se muestra como contexto, no como objetivo de tratamiento ni bajo la lógica “más alto siempre es mejor”.</li><li>HOMA-IR no tiene un punto de corte universal y no recibe clasificación cromática.</li><li>TFGe de 60–89 mL/min/1.73 m² sin otros marcadores no diagnostica ERC.</li><li>FIB-4 tiene rendimiento limitado antes de los 35 años; en mayores de 65 años se ajusta el punto de corte inferior.</li><li>Lp(a) no se convierte automáticamente entre mg/dL y nmol/L.</li><li>PCR-us ≥10 mg/L requiere valorar infección/inflamación y repetición en estabilidad clínica.</li></ul>
       <h3>Privacidad</h3><p>La persistencia utiliza almacenamiento local del navegador. Borrar datos del navegador puede eliminar el historial. Exporte respaldos cifrados o resguardados por usted y no utilice identificadores directos.</p>
       <h3>Fuentes metodológicas principales</h3><ul>
@@ -270,20 +308,24 @@
         <li><a href="https://pubmed.ncbi.nlm.nih.gov/38851997/" target="_blank" rel="noopener">EASL–EASD–EASO 2024. Guía MASLD, PMID 38851997</a>.</li>
         <li><a href="https://professional.heart.org/en/guidelines-statements/2026-ahaaccadaasn-guideline-for-the-prevention-detection-evaluation-andcir0000000000001453" target="_blank" rel="noopener">AHA/ACC/ADA/ASN 2026. Guía de síndrome CKM</a>.</li>
       </ul>
-      <p><strong>Versión clínica 1.0.</strong> Los puntos de corte deben revisarse cuando cambien las guías o cuando se utilice la herramienta en poblaciones especiales.</p>
+      <p><strong>Versión clínica 1.1.</strong> Los puntos de corte deben revisarse cuando cambien las guías o cuando se utilice la herramienta en poblaciones especiales.</p>
     </div></div>
   </div>
 
   <script>
   (() => {
     'use strict';
-    const APP_VERSION = '1.0.0';
+    const APP_VERSION = '1.1.0';
     const STORAGE_KEY = 'crm-health-map-v1';
     const $ = (s, root=document) => root.querySelector(s);
     const $$ = (s, root=document) => [...root.querySelectorAll(s)];
     const form = $('#clinicalForm');
     const toastEl = $('#toast');
     let toastTimer;
+    let loadedVisitId = null;
+    let selectedCompareIds = new Set();
+    let comparisonPatientCode = '';
+    const comparisonColors = ['#687887','#3d6f98','#9b6f3d','#7d6699'];
 
     const nf = new Intl.NumberFormat('es-MX', {maximumFractionDigits:1});
     const nfi = new Intl.NumberFormat('es-MX', {maximumFractionDigits:0});
@@ -296,7 +338,42 @@
 
     function toast(message){ clearTimeout(toastTimer); toastEl.textContent=message; toastEl.classList.add('show'); toastTimer=setTimeout(()=>toastEl.classList.remove('show'),2600); }
     function readDB(){ try { const x=JSON.parse(localStorage.getItem(STORAGE_KEY)); return x&&x.version&&x.patients ? x : {version:APP_VERSION,patients:{}}; } catch { return {version:APP_VERSION,patients:{}}; } }
-    function writeDB(db){ localStorage.setItem(STORAGE_KEY, JSON.stringify(db)); }
+    function writeDB(db){ db.version=APP_VERSION; localStorage.setItem(STORAGE_KEY, JSON.stringify(db)); }
+
+    function setPatientCode(code,locked=true){
+      const input=$('#patientCode'); input.value=code||''; input.readOnly=Boolean(code&&locked); $('#workspacePatientCode').textContent=code||'Nuevo';
+    }
+    function showHome(){
+      $('#workspace').hidden=true; $('#patientHome').hidden=false; $('#printBtn').hidden=true; renderPatientHome(); window.scrollTo({top:0,behavior:'smooth'});
+    }
+    function showWorkspace(){
+      $('#patientHome').hidden=true; $('#workspace').hidden=false; $('#printBtn').hidden=false; $('#workspacePatientCode').textContent=$('#patientCode').value.trim()||'Nuevo'; calculate(); renderHistory(); requestAnimationFrame(drawProfileLines); window.scrollTo({top:0,behavior:'smooth'});
+    }
+    function blankDefaults(){ return {patientCode:'',visitDate:today(),activityFactor:'1.4',energyGoal:'deficit',goalPercent:'20',lpaUnit:'nmol/L',ldlTarget:'100',nonHdlTarget:'130',apobTarget:'90',astUln:'35',altUln:'35',ggtUln:'55',targetContext:'custom'}; }
+    function startNewPatient(){
+      form.reset(); fill(blankDefaults()); setPatientCode('',false); loadedVisitId=null; selectedCompareIds.clear(); comparisonPatientCode=''; showWorkspace(); setTimeout(()=>$('#patientCode').focus(),100);
+    }
+    function stableFieldsFrom(d={}){
+      const keys=['sex','age','height','lpa','lpaUnit','ldlTarget','nonHdlTarget','apobTarget','astUln','altUln','ggtUln','targetContext','formerSmoking','diabetes','hypertension','ckd','masld','ascvd','heartFailure','osa','familyHistory'];
+      const out=blankDefaults(); keys.forEach(k=>{if(k in d)out[k]=d[k]}); return out;
+    }
+    function openPatient(code){
+      const p=readDB().patients[code]; if(!p?.visits?.length)return;
+      const v=p.visits[p.visits.length-1]; form.reset(); fill(v.data); setPatientCode(code,true); loadedVisitId=v.id; initializeComparisons(code); showWorkspace();
+    }
+    function startPatientVisit(code){
+      const p=readDB().patients[code]; if(!p?.visits?.length)return;
+      const latest=p.visits[p.visits.length-1], next={...stableFieldsFrom(latest.data),patientCode:code,visitDate:today()};
+      form.reset(); fill(next); setPatientCode(code,true); loadedVisitId=null; initializeComparisons(code); showWorkspace(); toast('Nueva visita preparada; complete las mediciones actuales.');
+    }
+    function renderPatientHome(){
+      const db=readDB(), entries=Object.entries(db.patients).filter(([,p])=>p?.visits?.length).sort((a,b)=>(b[1].visits.at(-1)?.data.visitDate||'').localeCompare(a[1].visits.at(-1)?.data.visitDate||''));
+      const list=$('#patientList');
+      if(!entries.length){list.innerHTML='<div class="empty" style="grid-column:1/-1"><strong>Aún no hay pacientes guardados</strong>Pulse “Nuevo paciente” para comenzar.</div>';return;}
+      list.innerHTML=entries.map(([code,p])=>{const last=p.visits[p.visits.length-1],d=last.data,der=last.derived||derived(d),summary=[finite(der.bmi)?`IMC ${nf.format(der.bmi)}`:'',finite(d.ldl)?`LDL ${nf.format(d.ldl)}`:'',finite(d.apob)?`ApoB ${nf.format(d.apob)}`:''].filter(Boolean).join(' · ');return `<article class="patient-card"><div class="patient-card-head"><h3>${esc(code)}</h3><span class="visit-count">${p.visits.length} visita${p.visits.length===1?'':'s'}</span></div><div class="patient-meta"><b>Última:</b> ${formatDate(d.visitDate)}${summary?`<br>${summary}`:''}</div><div class="patient-actions"><button class="btn primary" type="button" data-open-patient="${esc(code)}">Abrir paciente</button><button class="btn" type="button" data-new-patient-visit="${esc(code)}">Nueva visita</button></div></article>`}).join('');
+      $$('[data-open-patient]',list).forEach(b=>b.onclick=()=>openPatient(b.dataset.openPatient));
+      $$('[data-new-patient-visit]',list).forEach(b=>b.onclick=()=>startPatientVisit(b.dataset.newPatientVisit));
+    }
 
     function collect(){
       const d={};
@@ -348,6 +425,7 @@
 
     const statusText={good:'En rango',watch:'Vigilar',high:'Elevado',danger:'Atención',neutral:'Contexto'};
     const metrics = [
+      {group:'Adiposidad',key:'weight',label:'Peso',unit:'kg',min:40,max:180,classify:()=> 'neutral',note:'Interpretar mediante su evolución individual'},
       {group:'Adiposidad',key:'bmi',label:'IMC',unit:'kg/m²',source:'derived',min:15,max:45,kind:'bidirectional',classify:(v)=>v<18.5?'high':v<25?'good':v<30?'watch':v<35?'high':'danger'},
       {group:'Adiposidad',key:'waist',label:'Cintura',unit:'cm',min:55,max:145,classify:(v,d)=>d.sex==='female'?(v<80?'good':v<88?'watch':'danger'):(v<94?'good':v<102?'watch':'danger')},
       {group:'Adiposidad',key:'whtr',label:'Cintura/estatura',unit:'',source:'derived',min:.35,max:.75,classify:v=>v<.4?'watch':v<.5?'good':v<.6?'high':'danger'},
@@ -382,6 +460,12 @@
     function ulnClass(v,u){ const r=v/u; return r<=1?'good':r<=2?'high':'danger'; }
     function valueFor(m,d,der){ return m.source==='derived' ? num(der[m.key]) : num(d[m.key]); }
     function unitFor(m,d){ return typeof m.unit==='function'?m.unit(d):m.unit; }
+    function profilePosition(m,v,d){
+      const st=m.classify(v,d); if(st==='neutral')return 50;
+      const center={good:12,watch:37,high:62,danger:88}[st]??50;
+      let raw=clamp((v-m.min)/(m.max-m.min),0,1); if(m.kind==='reverse')raw=1-raw;
+      return clamp(center+(raw-.5)*10,2,98);
+    }
 
     function syncGoalOptions(){
       const goal=$('#energyGoal').value, sel=$('#goalPercent'), current=sel.value;
@@ -426,10 +510,36 @@
       const flags=flagDefs.filter(([k])=>d[k]).map(([,label,st])=>`<span class="flag ${st}">${label}</span>`).join('');
       if(!count&&!flags){$('#profileMap').innerHTML='<div class="empty"><strong>Introduzca datos clínicos</strong>El mapa aparecerá conforme se completen los campos.</div>';return;}
       const mapHtml=Object.entries(groups).map(([g,items])=>`<div class="domain"><div class="domain-head"><h3>${g}</h3><span>${items.length} indicador${items.length===1?'':'es'}</span></div>${items.map(({m,v})=>{
-        const st=m.classify(v,d), pos=clamp((v-m.min)/(m.max-m.min)*100,1,99), unit=unitFor(m,d);
-        return `<div class="metric"><div class="metric-name">${m.label}<small>${m.note||''}</small></div><div class="track ${m.kind||''}"><span class="marker" style="left:${pos}%"></span></div><div class="metric-value">${nf.format(v)} ${unit}<small class="status-${st}">${statusText[st]}</small></div></div>`;
+        const st=m.classify(v,d),pos=profilePosition(m,v,d),unit=unitFor(m,d);
+        return `<div class="metric"><div class="metric-name">${m.label}<small>${m.note||''}</small></div><div class="track ${st==='neutral'?'neutral-track':''}" data-metric-key="${m.key}"><span class="marker" data-current-marker="1" data-profile-status="${st}" style="left:${pos}%" title="${esc(m.label)}: ${nf.format(v)} ${esc(unit)}"></span></div><div class="metric-value">${nf.format(v)} ${unit}<small class="status-${st}">${statusText[st]}</small></div></div>`;
       }).join('')}</div>`).join('');
-      $('#profileMap').innerHTML=mapHtml+(flags?`<div class="domain"><div class="domain-head"><h3>Exposiciones y enfermedad conocida</h3><span>Sin puntuación</span></div><div class="flag-grid">${flags}</div></div>`:'');
+      $('#profileMap').innerHTML=`<div class="profile-stage"><svg class="profile-lines" aria-hidden="true"></svg>${mapHtml}${flags?`<div class="domain"><div class="domain-head"><h3>Exposiciones y enfermedad conocida</h3><span>Sin puntuación</span></div><div class="flag-grid">${flags}</div></div>`:''}</div>`;
+      requestAnimationFrame(drawProfileLines);
+    }
+
+    function initializeComparisons(code){
+      const p=readDB().patients[code]; comparisonPatientCode=code; selectedCompareIds.clear();
+      if(p?.visits?.length)[...p.visits].reverse().filter(v=>v.id!==loadedVisitId).slice(0,3).forEach(v=>selectedCompareIds.add(v.id));
+    }
+    function renderComparisonControls(){
+      const code=$('#patientCode').value.trim(),p=readDB().patients[code],box=$('#profileCompareControls');
+      if(!code||!p?.visits?.length){box.innerHTML='';return;}
+      if(comparisonPatientCode!==code)initializeComparisons(code);
+      const choices=[...p.visits].reverse().filter(v=>v.id!==loadedVisitId).slice(0,4);
+      if(!choices.length){box.innerHTML='';return;}
+      box.innerHTML=`<div class="profile-compare"><div class="profile-compare-title">Superponer consultas anteriores</div><div class="compare-options">${choices.map((v,i)=>`<label class="compare-option" style="--series-color:${comparisonColors[i]}"><input type="checkbox" data-compare-id="${v.id}" ${selectedCompareIds.has(v.id)?'checked':''}><span class="compare-swatch"></span>${formatDate(v.data.visitDate)}</label>`).join('')}</div></div>`;
+      $$('[data-compare-id]',box).forEach(input=>input.onchange=()=>{if(input.checked)selectedCompareIds.add(input.dataset.compareId);else selectedCompareIds.delete(input.dataset.compareId);drawProfileLines();});
+    }
+    function drawProfileLines(){
+      const stage=$('.profile-stage',$('#profileMap')); if(!stage||$('#workspace').hidden)return;
+      const svg=$('.profile-lines',stage),stageRect=stage.getBoundingClientRect(); if(!svg||!stageRect.width||!stageRect.height)return;
+      svg.setAttribute('viewBox',`0 0 ${stageRect.width} ${stageRect.height}`);
+      const pointFor=(track,pos)=>{const r=track.getBoundingClientRect();return [r.left-stageRect.left+r.width*pos/100,r.top-stageRect.top+r.height/2]};
+      const path=(pts,color,width,opacity,circles=true)=>{if(!pts.length)return'';const line=pts.length>1?`<polyline points="${pts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="${color}" stroke-width="${width}" stroke-opacity="${opacity}" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>`:'';const dots=circles?pts.map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="${color}" fill-opacity="${opacity}" stroke="#fff" stroke-width="1.5" vector-effect="non-scaling-stroke"/>`).join(''):'';return line+dots;};
+      let markup=''; const code=$('#patientCode').value.trim(),p=readDB().patients[code];
+      if(p?.visits?.length){const choices=[...p.visits].reverse().filter(v=>v.id!==loadedVisitId).slice(0,4);choices.forEach((v,i)=>{if(!selectedCompareIds.has(v.id))return;const der=v.derived||derived(v.data),pts=[];$$('.track[data-metric-key]',stage).forEach(track=>{const m=metrics.find(x=>x.key===track.dataset.metricKey),val=m?valueFor(m,v.data,der):null;if(val===null||m.classify(val,v.data)==='neutral')return;pts.push(pointFor(track,profilePosition(m,val,v.data)));});markup+=path(pts,comparisonColors[i%comparisonColors.length],1.7,.55);});}
+      const currentPts=[];$$('[data-current-marker]',stage).forEach(marker=>{if(marker.dataset.profileStatus==='neutral')return;const track=marker.parentElement;currentPts.push(pointFor(track,parseFloat(marker.style.left)));});
+      markup+=path(currentPts,'#17212b',2.8,.95,false); svg.innerHTML=markup;
     }
 
     function renderAlerts(d,der){
@@ -456,57 +566,71 @@
       const same=db.patients[code].visits.findIndex(v=>v.data.visitDate===d.visitDate);
       if(same>=0){ if(!confirm('Ya existe una visita en esta fecha. ¿Desea reemplazarla?'))return; db.patients[code].visits[same]=visit; }
       else db.patients[code].visits.push(visit);
-      db.patients[code].visits.sort((a,b)=>a.data.visitDate.localeCompare(b.data.visitDate)); writeDB(db); renderHistory();toast('Visita guardada localmente.');
+      db.patients[code].visits.sort((a,b)=>a.data.visitDate.localeCompare(b.data.visitDate)); writeDB(db); loadedVisitId=visit.id;setPatientCode(code,true);initializeComparisons(code);renderHistory();renderPatientHome();toast('Visita guardada localmente.');
     }
     function currentPatient(){ const code=$('#patientCode').value.trim(); return readDB().patients[code]||null; }
-    function loadVisit(id){ const p=currentPatient();const v=p?.visits.find(x=>x.id===id);if(v){fill(v.data);window.scrollTo({top:0,behavior:'smooth'});toast('Visita cargada.');} }
+    function loadVisit(id){ const p=currentPatient(),code=$('#patientCode').value.trim();const v=p?.visits.find(x=>x.id===id);if(v){loadedVisitId=v.id;fill(v.data);setPatientCode(code,true);initializeComparisons(code);renderHistory();window.scrollTo({top:0,behavior:'smooth'});toast('Visita cargada.');} }
     function deleteVisit(id){
       const code=$('#patientCode').value.trim(),db=readDB(),p=db.patients[code];if(!p)return;
       if(!confirm('¿Eliminar esta visita del navegador? Esta acción no se puede deshacer.'))return;
-      p.visits=p.visits.filter(v=>v.id!==id);if(!p.visits.length)delete db.patients[code];writeDB(db);renderHistory();toast('Visita eliminada.');
+      p.visits=p.visits.filter(v=>v.id!==id);const patientEmpty=!p.visits.length;if(patientEmpty)delete db.patients[code];writeDB(db);if(loadedVisitId===id)loadedVisitId=null;initializeComparisons(code);renderHistory();renderPatientHome();if(patientEmpty)showHome();toast('Visita eliminada.');
     }
     function clearPatient(){
       const code=$('#patientCode').value.trim(),db=readDB();if(!code||!db.patients[code]){toast('No hay historial para este código.');return;}
-      if(!confirm(`¿Eliminar todas las visitas de ${code}? Esta acción no se puede deshacer.`))return;delete db.patients[code];writeDB(db);renderHistory();toast('Historial del paciente eliminado.');
+      if(!confirm(`¿Eliminar todas las visitas de ${code}? Esta acción no se puede deshacer.`))return;delete db.patients[code];writeDB(db);loadedVisitId=null;selectedCompareIds.clear();renderPatientHome();showHome();toast('Historial del paciente eliminado.');
     }
 
     const timelineMetricKeys=['weight','bmi','waist','whtr','vat','sbp','dbp','restingHR','steps','aerobicMinutes','strengthSessions','sleepHours','glucose','hba1c','ldl','nonHdl','apob','tg','egfrMap','uacr','alt','ggt','fib4','hscrp'];
+    function renderTrend(p){
+      const select=$('#trendMetricSelect'),chart=$('#trendChart');
+      const available=p?.visits?.length?timelineMetricKeys.map(k=>metrics.find(m=>m.key===k)).filter(Boolean).filter(m=>p.visits.filter(v=>valueFor(m,v.data,v.derived||derived(v.data))!==null).length>=2):[];
+      if(!available.length){select.innerHTML='<option>Sin indicadores comparables</option>';select.disabled=true;chart.innerHTML='<div class="empty"><strong>Sin tendencia disponible</strong>Se necesitan al menos dos visitas con el mismo indicador.</div>';return;}
+      const prior=select.value;select.disabled=false;select.innerHTML=available.map(m=>`<option value="${m.key}">${m.label}</option>`).join('');if(available.some(m=>m.key===prior))select.value=prior;
+      const m=available.find(x=>x.key===select.value)||available[0],points=p.visits.map(v=>({v,der:v.derived||derived(v.data),date:new Date(v.data.visitDate+'T12:00:00').getTime()})).map(x=>({...x,value:valueFor(m,x.v.data,x.der)})).filter(x=>x.value!==null);
+      const W=Math.max(320,chart.clientWidth||620),H=270,L=52,R=18,T=24,B=42,dates=points.map(x=>x.date),vals=points.map(x=>x.value),minDate=Math.min(...dates),maxDate=Math.max(...dates),rawMin=Math.min(...vals),rawMax=Math.max(...vals),pad=(rawMax-rawMin||Math.max(Math.abs(rawMax)*.1,1))*.16,yMin=rawMin-pad,yMax=rawMax+pad;
+      const xScale=x=>L+(maxDate===minDate ? .5 : (x-minDate)/(maxDate-minDate))*(W-L-R),yScale=y=>T+(yMax-y)/(yMax-yMin)*(H-T-B),statusColor={good:'#2f9e44',watch:'#b38a00',high:'#e57c2f',danger:'#d83c3c',neutral:'#7c8996'};
+      const yTicks=[0,.25,.5,.75,1].map(t=>yMin+t*(yMax-yMin)),tickIdx=points.length<=4?points.map((_,i)=>i):[0,Math.round((points.length-1)/3),Math.round((points.length-1)*2/3),points.length-1].filter((x,i,a)=>a.indexOf(x)===i),unit=unitFor(m,points.at(-1).v.data);
+      chart.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Tendencia de ${esc(m.label)}"><rect class="trend-frame" x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}" rx="8"/>${yTicks.map(t=>`<line class="trend-grid" x1="${L}" x2="${W-R}" y1="${yScale(t)}" y2="${yScale(t)}"/><text class="trend-axis" x="${L-7}" y="${yScale(t)+3}" text-anchor="end">${nf.format(t)}</text>`).join('')}<polyline class="trend-line" points="${points.map(p=>`${xScale(p.date)},${yScale(p.value)}`).join(' ')}"/>${points.map(p=>{const st=m.classify(p.value,p.v.data);return `<circle class="trend-point" cx="${xScale(p.date)}" cy="${yScale(p.value)}" r="5" fill="${statusColor[st]}"/><text class="trend-value" x="${xScale(p.date)}" y="${yScale(p.value)-9}" text-anchor="middle">${nf.format(p.value)}</text>`}).join('')}${tickIdx.map(i=>`<text class="trend-axis" x="${xScale(points[i].date)}" y="${H-17}" text-anchor="${i===0?'start':i===points.length-1?'end':'middle'}">${new Date(points[i].date).toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'2-digit'})}</text>`).join('')}<text class="trend-axis" x="${L}" y="14">${esc(m.label)}${unit?' · '+esc(unit):''}</text></svg>`;
+    }
     function renderHistory(){
       const code=$('#patientCode').value.trim(),p=currentPatient(),list=$('#historyList'),container=$('#timelineContainer');
+      renderComparisonControls();renderTrend(p);
       if(!code||!p?.visits?.length){list.innerHTML='<div class="empty"><strong>Sin historial</strong>Guarde una visita para este código.</div>';container.innerHTML='<div class="empty"><strong>Sin visitas guardadas</strong>La evolución aparecerá aquí.</div>';return;}
-      list.innerHTML=`<div class="history-list">${[...p.visits].reverse().map(v=>`<div class="visit"><div><b>${formatDate(v.data.visitDate)}</b><small>${finite(v.derived?.bmi)?`IMC ${nf.format(v.derived.bmi)} · `:''}${finite(v.data.ldl)?`LDL ${nf.format(v.data.ldl)} · `:''}${finite(v.data.apob)?`ApoB ${nf.format(v.data.apob)}`:''}</small></div><div><button class="btn small" data-load="${v.id}" type="button">Abrir</button> <button class="btn small danger" data-delete="${v.id}" type="button">×</button></div></div>`).join('')}</div>`;
+      list.innerHTML=`<div class="history-list">${[...p.visits].reverse().map(v=>{const vd=v.derived||derived(v.data);return `<div class="visit"><div><b>${formatDate(v.data.visitDate)}${v.id===loadedVisitId?' · abierta':''}</b><small>${finite(vd.bmi)?`IMC ${nf.format(vd.bmi)} · `:''}${finite(v.data.ldl)?`LDL ${nf.format(v.data.ldl)} · `:''}${finite(v.data.apob)?`ApoB ${nf.format(v.data.apob)}`:''}</small></div><div><button class="btn small" data-load="${v.id}" type="button">Abrir</button> <button class="btn small danger" data-delete="${v.id}" type="button" aria-label="Eliminar visita">×</button></div></div>`}).join('')}</div>`;
       $$('[data-load]',list).forEach(b=>b.onclick=()=>loadVisit(b.dataset.load));$$('[data-delete]',list).forEach(b=>b.onclick=()=>deleteVisit(b.dataset.delete));
       const visits=p.visits.slice(-8); const available=timelineMetricKeys.map(k=>metrics.find(m=>m.key===k)).filter(Boolean).filter(m=>visits.some(v=>valueFor(m,v.data,v.derived)!==null));
       if(!available.length){container.innerHTML='<div class="empty"><strong>Sin indicadores comparables</strong>Las visitas guardadas no tienen variables del mapa.</div>';return;}
       container.innerHTML=`<div class="timeline-wrap"><table class="timeline"><thead><tr><th>Indicador</th>${visits.map(v=>`<th>${formatDate(v.data.visitDate)}</th>`).join('')}</tr></thead><tbody>${available.map(m=>`<tr><td>${m.label}</td>${visits.map(v=>{const val=valueFor(m,v.data,v.derived);if(val===null)return'<td>—</td>';const st=m.classify(val,v.data);return`<td class="cell-${st}" title="${statusText[st]}">${nf.format(val)}${unitFor(m,v.data)?' '+unitFor(m,v.data):''}</td>`;}).join('')}</tr>`).join('')}</tbody></table></div><div class="note">Se muestran como máximo las ocho visitas más recientes. Los colores utilizan la meta y el contexto guardados en cada visita.</div>`;
+      requestAnimationFrame(drawProfileLines);
     }
 
     function newVisit(){
-      const keep={patientCode:$('#patientCode').value.trim(),visitDate:today(),sex:$('#sex').value,age:$('#age').value,ldlTarget:$('[data-key="ldlTarget"]').value,nonHdlTarget:$('[data-key="nonHdlTarget"]').value,apobTarget:$('[data-key="apobTarget"]').value,astUln:$('[data-key="astUln"]').value,altUln:$('[data-key="altUln"]').value,ggtUln:$('[data-key="ggtUln"]').value,activityFactor:'1.4',energyGoal:'deficit',goalPercent:'20',lpaUnit:'nmol/L',targetContext:'custom'};
-      form.reset();fill(keep);toast('Formulario preparado para una nueva visita.');
+      const code=$('#patientCode').value.trim(),p=readDB().patients[code];if(!code||!p){toast('Guarde primero al paciente actual.');return;}startPatientVisit(code);
     }
-    function exportData(){
-      const db=readDB(),code=$('#patientCode').value.trim(); const payload=code&&db.patients[code]?{app:'CRM Health Map',version:APP_VERSION,exportedAt:new Date().toISOString(),patients:{[code]:db.patients[code]}}:{app:'CRM Health Map',version:APP_VERSION,exportedAt:new Date().toISOString(),patients:db.patients};
-      const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`mapa-CRM-${code||'respaldo'}-${today()}.json`;a.click();URL.revokeObjectURL(url);toast('Respaldo exportado.');
+    function exportData(all=false){
+      const db=readDB(),code=$('#patientCode').value.trim(); const payload=!all&&code&&db.patients[code]?{app:'CRM Health Map',version:APP_VERSION,exportedAt:new Date().toISOString(),patients:{[code]:db.patients[code]}}:{app:'CRM Health Map',version:APP_VERSION,exportedAt:new Date().toISOString(),patients:db.patients};
+      const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`mapa-CRM-${all?'respaldo-total':code||'respaldo'}-${today()}.json`;a.click();URL.revokeObjectURL(url);toast('Respaldo exportado.');
     }
     async function importData(file){
-      try{const payload=JSON.parse(await file.text());if(!payload||typeof payload.patients!=='object')throw new Error();const db=readDB();Object.entries(payload.patients).forEach(([code,p])=>{if(!p||!Array.isArray(p.visits))return;db.patients[code]??={createdAt:p.createdAt||new Date().toISOString(),visits:[]};const byId=new Map(db.patients[code].visits.map(v=>[v.id,v]));p.visits.forEach(v=>{if(v?.id&&v?.data)byId.set(v.id,v)});db.patients[code].visits=[...byId.values()].sort((a,b)=>(a.data.visitDate||'').localeCompare(b.data.visitDate||''));});writeDB(db);renderHistory();toast('Datos importados correctamente.');}catch{toast('El archivo no tiene un formato válido.');}
+      try{const payload=JSON.parse(await file.text());if(!payload||typeof payload.patients!=='object')throw new Error();const db=readDB();Object.entries(payload.patients).forEach(([code,p])=>{if(!p||!Array.isArray(p.visits))return;db.patients[code]??={createdAt:p.createdAt||new Date().toISOString(),visits:[]};const byId=new Map(db.patients[code].visits.map(v=>[v.id,v]));p.visits.forEach(v=>{if(v?.id&&v?.data)byId.set(v.id,v)});db.patients[code].visits=[...byId.values()].sort((a,b)=>(a.data.visitDate||'').localeCompare(b.data.visitDate||''));});writeDB(db);renderPatientHome();renderHistory();toast('Datos importados correctamente.');}catch{toast('El archivo no tiene un formato válido.');}
     }
     function applyTargetContext(){
       const v=$('#targetContext').value,presets={standard:[100,130,90],intensified:[70,100,65],veryHigh:[55,85,55]};if(!presets[v])return;
       const [l,n,a]=presets[v];$('[data-key="ldlTarget"]').value=l;$('[data-key="nonHdlTarget"]').value=n;$('[data-key="apobTarget"]').value=a;calculate();
     }
     function demo(){
-      fill({patientCode:'EJEMPLO-01',visitDate:today(),sex:'male',age:'42',weight:'108',height:'175',waist:'119',thigh:'61',activityFactor:'1.3',energyGoal:'deficit',goalPercent:'20',sbp:'132',dbp:'84',restingHR:'82',sleepHours:'6',steps:'4200',aerobicMinutes:'45',strengthSessions:'1',sittingHours:'10',glucose:'108',hba1c:'5.9',fastingInsulin:'18',tg:'286',tc:'246',hdl:'39',ldl:'154',apob:'132',lpa:'24',lpaUnit:'nmol/L',alt:'62',ast:'39',ggt:'74',platelets:'238',creatinine:'1.02',uacr:'18',urea:'35',uricAcid:'8.1',hscrp:'3.4',ldlTarget:'70',nonHdlTarget:'100',apobTarget:'65',astUln:'35',altUln:'35',ggtUln:'55',targetContext:'custom',vaping:true,masld:true,notes:'Datos demostrativos; no corresponden a un paciente real.'});toast('Ejemplo cargado; no se ha guardado.');
+      form.reset();fill({patientCode:'EJEMPLO-01',visitDate:today(),sex:'male',age:'42',weight:'108',height:'175',waist:'119',thigh:'61',activityFactor:'1.3',energyGoal:'deficit',goalPercent:'20',sbp:'132',dbp:'84',restingHR:'82',sleepHours:'6',steps:'4200',aerobicMinutes:'45',strengthSessions:'1',sittingHours:'10',glucose:'108',hba1c:'5.9',fastingInsulin:'18',tg:'286',tc:'246',hdl:'39',ldl:'154',apob:'132',lpa:'24',lpaUnit:'nmol/L',alt:'62',ast:'39',ggt:'74',platelets:'238',creatinine:'1.02',uacr:'18',urea:'35',uricAcid:'8.1',hscrp:'3.4',ldlTarget:'70',nonHdlTarget:'100',apobTarget:'65',astUln:'35',altUln:'35',ggtUln:'55',targetContext:'custom',vaping:true,masld:true,notes:'Datos demostrativos; no corresponden a un paciente real.'});setPatientCode('EJEMPLO-01',true);loadedVisitId=null;selectedCompareIds.clear();comparisonPatientCode='EJEMPLO-01';showWorkspace();toast('Ejemplo demostrativo cargado; no se ha guardado.');
     }
 
-    form.addEventListener('input',e=>{if(e.target.id==='patientCode')renderHistory();calculate();});
+    form.addEventListener('input',e=>{if(e.target.id==='patientCode'){$('#workspacePatientCode').textContent=e.target.value.trim()||'Nuevo';renderHistory();}calculate();});
     form.addEventListener('change',e=>{if(e.target.id==='activityFactor'||e.target.id==='energyGoal')syncControls();if(e.target.id==='targetContext')applyTargetContext();calculate();});
     form.addEventListener('submit',saveVisit);
-    $('#refreshBtn').onclick=calculate;$('#newVisitBtn').onclick=newVisit;$('#exportBtn').onclick=exportData;$('#clearPatientBtn').onclick=clearPatient;$('#demoBtn').onclick=demo;$('#printBtn').onclick=()=>window.print();
+    $('#refreshBtn').onclick=calculate;$('#newVisitBtn').onclick=newVisit;$('#exportBtn').onclick=()=>exportData(false);$('#clearPatientBtn').onclick=clearPatient;$('#demoBtn').onclick=demo;$('#printBtn').onclick=()=>window.print();
+    $('#newPatientBtn').onclick=startNewPatient;$('#backHomeBtn').onclick=showHome;$('#homeBackupBtn').onclick=()=>exportData(true);$('#workspaceBackupBtn').onclick=()=>exportData(false);$('#workspaceNewVisitBtn').onclick=newVisit;$('#trendMetricSelect').onchange=()=>renderTrend(currentPatient());
     $('#importFile').onchange=e=>{if(e.target.files[0])importData(e.target.files[0]);e.target.value='';};
     const modal=$('#helpModal');$('#helpBtn').onclick=()=>modal.classList.add('open');$('#closeHelp').onclick=()=>modal.classList.remove('open');modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
-    $('#visitDate').value=today();syncControls();calculate();renderHistory();
+    window.addEventListener('resize',()=>{requestAnimationFrame(drawProfileLines);renderTrend(currentPatient());});
+    form.reset();fill(blankDefaults());renderPatientHome();showHome();
   })();
   </script>
 </body>
